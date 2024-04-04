@@ -44,20 +44,22 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
-    #".config/git/config".source = "~/.dotfiles/git/config";
-    # ".config/git/.gitignore_global".source = "~/.dotfiles/git/.gitignore_global";
+    ".config/git/config".source = ~/.dotfiles/git/config;
+    ".config/git/.gitignore_global".source = ~/.dotfiles/git/.gitignore_global;
 
-    #".config/zsh".source = "~/.dotfiles/zsh";
+    ".config/zsh".source = ~/.dotfiles/zsh;
 
-    #".config/wezterm".source = "~/.dotfiles/wezterm";
+    ".config/wezterm".source = ~/.dotfiles/wezterm;
 
-    #".config/sxhkd/sxhkdrc".source = "~/.dotfiles/sxhkd/sxhkdrc";
+    ".config/sxhkd".source = ~/.dotfiles/sxhkd;
 
-    #".ssh/config".source = "~/.dotfiles/ssh/config";
+    ".ssh/config".source = ~/.dotfiles/ssh/config;
 
-    #".config/nvim".source = "~/.dotfiles/nvim"; # does it do directory?
+    ".config/nvim".source = ~/.dotfiles/nvim; 
 
-    #".xinitrc".source = "~/.dotfiles/x11/.xinitrc";
+    ".xinitrc".source = ~/.dotfiles/x11/.xinitrc;
+
+    ".config/tmux".source = ~/.dotfiles/tmux;
 
   };
 
