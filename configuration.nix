@@ -57,6 +57,8 @@
   hardware.pulseaudio.enable = true;
 
   services.xserver.libinput.enable = true; #Touchpad
+  services.xserver.synaptics.horizontalScroll = true;
+  services.xserver.libinput.touchpad.naturalScrolling = true;
 
   programs.zsh.enable = true;
 
@@ -122,6 +124,10 @@
      xorg.libX11
      xorg.libxkbfile
      spotifyd
+     tree-sitter
+     nodejs_21
+     zathura
+     localsend
    ];
 
    environment.variables = rec {

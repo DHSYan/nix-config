@@ -47,7 +47,7 @@
     ".config/git/config".source = ~/.dotfiles/git/config;
     ".config/git/.gitignore_global".source = ~/.dotfiles/git/.gitignore_global;
 
-    ".config/zsh".source = ~/.dotfiles/zsh;
+    ".config/zsh/.zshrc".source = ~/.dotfiles/zsh/.zshrc;
 
     ".config/wezterm".source = ~/.dotfiles/wezterm;
 
@@ -60,6 +60,8 @@
     ".xinitrc".source = ~/.dotfiles/x11/.xinitrc;
 
     ".config/tmux".source = ~/.dotfiles/tmux;
+    
+    ".config/zathura".source = ~/.dotfiles/zathura;
 
   };
 
