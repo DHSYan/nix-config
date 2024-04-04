@@ -36,6 +36,7 @@
   nixpkgs.overlays = [
   	(final: prev: {
 		dwm = prev.dwm.overrideAttrs (old: { src = /home/tzen/dwm ;});
+		slstatus = prev.slstatus.overrideAttrs (old: { src = /home/tzen/dwm/slstatus ;});
 	})
   ];
 
@@ -56,9 +57,14 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
-  services.xserver.libinput.enable = true; #Touchpad
   services.xserver.synaptics.horizontalScroll = true;
-  services.xserver.libinput.touchpad.naturalScrolling = true;
+  services.xserver.libinput.enable = true; #touchpad
+  services.xserver.libinput.touchpad = {
+      naturalScrolling = true;
+      tappingButtonMap = "lmr";
+      tapping = false;
+  };
+
 
   programs.zsh.enable = true;
 
@@ -128,6 +134,8 @@
      nodejs_21
      zathura
      localsend
+     bitwarden
+     slstatus
    ];
 
    environment.variables = rec {
@@ -137,6 +145,7 @@
 
    fonts.packages = with pkgs; [
      (nerdfonts.override { fonts = [ "Hermit" "Iosevka" "JetBrainsMono" "Terminus"];})
+     font-awesome
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
