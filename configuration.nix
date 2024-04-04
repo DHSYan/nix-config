@@ -44,7 +44,7 @@
   # DWM Overlay
   nixpkgs.overlays = [
   	(final: prev: {
-		dwm = prev.dwm.overrideAttrs (old: { src = /home/tzen/.dotfiles/dwm-stuff/dwm ;});
+		dwm = prev.dwm.overrideAttrs (old: { src = /home/tzen/dwm ;});
 	})
   ];
 
