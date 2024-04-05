@@ -51,7 +51,19 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
+  hardware.bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+  };
+  services.blueman.enable = true;
+
   programs.zsh.enable = true;
+  # programs.nix-ld = {
+  #     enable = true;
+  #     libraries = with pkgs; [
+  #       exfat
+  #     ];
+  # };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.tzen = {
@@ -124,6 +136,9 @@
      xfce.thunar
      weylus
      lorien
+     blueman
+     copyq
+     xorg.xhost
    ];
 
    environment.variables = rec {
