@@ -121,6 +121,7 @@
      localsend
      bitwarden
      slstatus
+     xfce.thunar
    ];
 
    environment.variables = rec {
