@@ -122,6 +122,8 @@
      bitwarden
      slstatus
      xfce.thunar
+     weylus
+     lorien
    ];
 
    environment.variables = rec {
