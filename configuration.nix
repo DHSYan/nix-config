@@ -15,28 +15,8 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  networking.hostName = "nixos"; 
+  # networking.hostName = "nixos"; 
   # Pick only one of the below networking options.
-  networking.wireless =  {
-      enable = true;  # Enables wireless support via wpa_supplicant.
-      userControlled.enable = true;
-      environmentFile = "/etc/wireless.env";
-      networks = {
-          Pog = {
-              psk = "@POG_PSK@";
-          };
-          eduroam = {
-              auth = ''
-                  identity="z5521807@ad.unsw.edu.au"
-                  password="@EDUROAM_PSK@"
-                  key_mgmt=WPA-EAP
-                  eap=PEAP
-              '';
-          };
-      };
-  };
-  
-
   # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
   # Set your time zone.
@@ -45,9 +25,6 @@
   console.useXkbConfig = true;
 
   # Enable the X11 windowing system.
-  # services.xserver.videoDrivers = [ "nvidia" "modesetting" "intel"]; # This can't work, because the documentation says you can't mix unfree with free ones
-  # services.xserver.videoDrivers = [ "nvidia" "modesetting" ]; # This could work for FW, but not Destkop with nvidia
-  # services.xserver.videoDrivers = [ "nvidia" ]; # I mean the desktop could work without this, but the resolution won't be changable
   services.xserver.enable = true;
   services.xserver.autorun = false;
   services.xserver.displayManager.startx.enable = true;
@@ -59,6 +36,7 @@
   	(final: prev: {
 		dwm = prev.dwm.overrideAttrs (old: { src = /home/tzen/dwm ;});
 		slstatus = prev.slstatus.overrideAttrs (old: { src = /home/tzen/dwm/slstatus ;});
+        # neovim = prev.neovim.overrideAttrs (old: { src = /home/tzen/neovim; }); how to make this work?
 	})
   ];
 
@@ -72,15 +50,6 @@
   # Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
-
-  services.xserver.synaptics.horizontalScroll = true;
-  services.xserver.libinput.enable = true; #touchpad
-  services.xserver.libinput.touchpad = {
-      naturalScrolling = true;
-      tappingButtonMap = "lmr";
-      tapping = false;
-  };
-
 
   programs.zsh.enable = true;
 
@@ -164,15 +133,6 @@
      font-awesome
    ];
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
@@ -183,53 +143,6 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  # Copy the NixOS configuration file and link it from the resulting system
-  # (/run/current-system/configuration.nix). This is useful in case you
-  # accidentally delete configuration.nix.
-  # system.copySystemConfiguration = true;
-
-  # This option defines the first version of NixOS you have installed on this particular machine,
-  # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
-  #
-  # Most users should NEVER change this value after the initial install, for any reason,
-  # even if you've upgraded your system to a new NixOS release.
-  #
-  # This value does NOT affect the Nixpkgs version your packages and OS are pulled from,
-  # so changing it will NOT upgrade your system.
-  #
-  # This value being lower than the current NixOS release does NOT mean your system is
-  # out of date, out of support, or vulnerable.
-  #
-  # Do NOT change this value unless you have manually inspected all the changes it would make to your configuration,
-  # and migrated your data accordingly.
-  #
-  # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
-  system.stateVersion = "23.11"; # Did you read the comment?
-  
-  # Laptop Section
-  powerManagement = {
-  	enable = true;
-  };
-  services.tlp = {
-  	enable = true;
-	settings = {
-		CPU_SCALING_GOVERNOR_ON_AC = "performance";
-		CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-
-		CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
-		CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
-
-		CPU_MIN_PERF_ON_AC = 0;
-		CPU_MAN_PERF_ON_AC = 100;
-		CPU_MIN_PERF_ON_BAT = 0;
-		CPU_MAN_PERF_ON_BAT = 20;
-
-		START_CHARGE_THRESH_BAT0 = 40;
-		STOP_CHARGE_THRESH_BAT0 = 80;
-
-	};
-  };
-  services.thermald.enable = true;
-
+  system.stateVersion = "23.11"; 
 }
 
