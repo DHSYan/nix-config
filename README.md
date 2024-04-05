@@ -60,5 +60,6 @@ the project is even the correct way to do things)
   usage with arch wiki, I also think arch wifi are awesome. But I wouldn't
   say Nixos Manual is totally garbongo. It still got me thourgh installation,
   and many others quite comfortably. Though mind you, I am not that advanced.
-
+- [I didn't use this completely, but it's an unofficial book, that seems
+very very very well written](https://nixos-and-flakes.thiscute.world/)
 
