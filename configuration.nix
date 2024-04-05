@@ -32,7 +32,7 @@
 
   # Enable the X11 windowing system.
   # services.xserver.videoDrivers = [ "nvidia" "modesetting" "intel"]; # This can't work, because the documentation says you can't mix unfree with free ones
-  services.xserver.videoDrivers = [ "nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" "modesetting" ];
   services.xserver.enable = true;
   services.xserver.autorun = false;
   services.xserver.displayManager.startx.enable = true;
