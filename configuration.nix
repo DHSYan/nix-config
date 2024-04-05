@@ -32,7 +32,8 @@
 
   # Enable the X11 windowing system.
   # services.xserver.videoDrivers = [ "nvidia" "modesetting" "intel"]; # This can't work, because the documentation says you can't mix unfree with free ones
-  services.xserver.videoDrivers = [ "nvidia" "modesetting" ];
+  # services.xserver.videoDrivers = [ "nvidia" "modesetting" ]; # This could work for FW, but not Destkop with nvidia
+  services.xserver.videoDrivers = [ "nvidia" ]; # I mean the desktop could work without this, but the resolution won't be changable
   services.xserver.enable = true;
   services.xserver.autorun = false;
   services.xserver.displayManager.startx.enable = true;
