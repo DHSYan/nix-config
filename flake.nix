@@ -17,7 +17,10 @@
     in {
       nixosConfigurations = {
         default = nixpkgs.lib.nixosSystem {
-          modules = [ ./configuration.nix ]; 
+            modules = [ ./configuration.nix ]; 
+        };
+        nvidia = nixpkgs.lib.nixosSystem {
+            modules = [ ./configuration-nvidia.nix ]; 
         };
       };
 
