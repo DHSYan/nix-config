@@ -20,6 +20,20 @@
   networking.wireless =  {
       enable = true;  # Enables wireless support via wpa_supplicant.
       userControlled.enable = true;
+      environmentFile = "/etc/wireless.env";
+      networks = {
+          Pog = {
+              psk = "@POG_PSK@";
+          };
+          eduroam = {
+              auth = ''
+                  identity="z5521807@ad.unsw.edu.au"
+                  password="@EDUROAM_PSK@"
+                  key_mgmt=WPA-EAP
+                  eap=PEAP
+              '';
+          };
+      };
   };
   
 
