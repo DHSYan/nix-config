@@ -15,14 +15,11 @@
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
-      nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-	modules = [ ./configuration.nix ]; 
+      nixosConfigurations = {
+        default = nixpkgs.lib.nixosSystem {
+          modules = [ ./configuration.nix ]; 
+        };
       };
-
-      # Can the below be done?
-      #nixosConfigurations.nvidia = nixpkgs.lib.nixosSystem {
-      #  modules = [ ./configuration.nix ./nvidia.nix ]; 
-      #};
 
       homeConfigurations.tzen = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;

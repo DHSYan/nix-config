@@ -31,6 +31,8 @@
   console.useXkbConfig = true;
 
   # Enable the X11 windowing system.
+  # services.xserver.videoDrivers = [ "nvidia" "modesetting" "intel"]; # This can't work, because the documentation says you can't mix unfree with free ones
+  services.xserver.videoDrivers = [ "nvidia"];
   services.xserver.enable = true;
   services.xserver.autorun = false;
   services.xserver.displayManager.startx.enable = true;
@@ -44,12 +46,6 @@
 		slstatus = prev.slstatus.overrideAttrs (old: { src = /home/tzen/dwm/slstatus ;});
 	})
   ];
-
-  hardware.opengl = {
-  	enable = true;
-	driSupport = true;
-	driSupport32Bit = true;
-  };
 
   # Configure keymap in X11
   services.xserver.xkb.layout = "us";
