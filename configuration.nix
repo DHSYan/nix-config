@@ -139,6 +139,7 @@
      blueman
      copyq
      xorg.xhost
+     albert
    ];
 
    environment.variables = rec {
