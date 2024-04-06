@@ -8,19 +8,26 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixos-hardware = {
+        url = "github:NixOS/nixos-hardware/master";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager,... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
       nixosConfigurations = {
-        default = nixpkgs.lib.nixosSystem {
-            modules = [ ./configuration.nix ]; 
+        framework = nixpkgs.lib.nixosSystem {
+            modules = [ 
+                ./configuration-framework.nix  
+                nixos-hardware.nixosModules.framework-11th-gen-intel
+            ]; 
         };
-        nvidia = nixpkgs.lib.nixosSystem {
-            modules = [ ./configuration-nvidia.nix ]; 
+        pc = nixpkgs.lib.nixosSystem {
+            modules = [ ./configuration-pc.nix ]; 
         };
       };
 
