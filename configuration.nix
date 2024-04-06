@@ -141,10 +141,11 @@
      xorg.xhost
    ];
 
- #   environment.variables = rec {
-	# XDG_CONFIG_HOME = "$HOME/.config";
-	# ZDOTDIR = "$HOME/.config/zsh";
- #   };
+   environment.variables = rec {
+       EDITOR = "nvim";
+       XDG_CONFIG_HOME = "$HOME/.config";
+       ZDOTDIR = "$HOME/.config/zsh";
+   };
 
    fonts.packages = with pkgs; [
      (nerdfonts.override { fonts = [ "Hermit" "Iosevka" "JetBrainsMono" "Terminus"];})
