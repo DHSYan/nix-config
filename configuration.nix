@@ -140,6 +140,8 @@
      copyq
      xorg.xhost
      albert
+     pam_u2f
+     gnupg
    ];
 
    environment.variables = rec {
@@ -156,6 +158,25 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
+
+  # Yubikey nice to have - Not worknig yet tho
+  services.udev.packages= [ pkgs.yubikey-personalization ];
+  services.udev.extraRules = ''
+      ACTION=="remove",\
+      ENV{ID_BUS}=="usb",\
+      ENV{ID_MODEL_ID}=="0407",\
+      ENV{ID_VENDOR_ID}=="1050",\
+      ENV{ID_VENDOR}=="Yubico",\
+      RUN+="${pkgs.systemd}/bin/loginctl lock-sessions"
+      '';
+  programs.gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+  };
+  security.pam.services = {
+      login.u2fAuth = true;
+      sudo.u2fAuth = true;
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

@@ -46,6 +46,7 @@ the presence of a nvidia driver that is unfree.
 - [ ] Modularize the config
 - [ ] Follow Best practices (right now I have no idea if the current state of 
 the project is even the correct way to do things)
+- [ ] login not protected by yubi key
 
 # Sources that helped/inspired me 
 - [No Boilerplate's Video led me to discover NixOS](https://www.youtube.com/watch?v=CwfKlX3rA6E&t=484s)
