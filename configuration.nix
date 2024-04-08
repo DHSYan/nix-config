@@ -58,12 +58,12 @@
   services.blueman.enable = true;
 
   programs.zsh.enable = true;
-  # programs.nix-ld = {
-  #     enable = true;
-  #     libraries = with pkgs; [
-  #       exfat
-  #     ];
-  # };
+  programs.nix-ld = {
+      enable = true;
+      libraries = with pkgs; [
+        # exfat
+      ];
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.tzen = {
@@ -142,6 +142,8 @@
      albert
      pam_u2f
      gnupg
+     python3
+     xorg.xmodmap
    ];
 
    environment.variables = rec {

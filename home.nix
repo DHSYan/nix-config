@@ -63,6 +63,13 @@
     
     ".config/zathura".source = ~/.dotfiles/zathura;
 
+    "./throw-away-code/init.txt" = {
+        target = "./throw-away-code/init.txt";
+        text = "hi"; 
+    };
+    
+
+
   };
 
   # Apparently this is not setting my variable
