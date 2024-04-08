@@ -141,6 +141,7 @@
      xorg.xhost
      albert
      python3
+     xorg.xmodmap
    ];
 
    environment.variables = rec {
