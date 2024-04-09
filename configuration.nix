@@ -144,6 +144,8 @@
      gnupg
      python3
      xorg.xmodmap
+     xss-lock
+     slock
    ];
 
    environment.variables = rec {
