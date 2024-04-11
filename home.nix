@@ -59,7 +59,7 @@
 
     ".xinitrc".source = ~/.dotfiles/x11/.xinitrc;
 
-    ".config/tmux".source = ~/.dotfiles/tmux;
+    ".config/tmux/tmux.conf".source = ~/.dotfiles/tmux/tmux.conf;
     
     ".config/zathura".source = ~/.dotfiles/zathura;
 
