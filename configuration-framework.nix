@@ -23,6 +23,9 @@
                   eap=PEAP
               '';
           };
+          TwinklePhone = {
+              psk = "@TWINKLEPHONE_PSK@";
+          };
       };
   };
 
