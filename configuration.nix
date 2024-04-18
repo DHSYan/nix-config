@@ -50,7 +50,7 @@
   # Configure keymap in X11
   services.xserver.xkb.layout = "us";
   services.xserver.xkb.variant = "dvorak";
-  services.xserver.xkb.options = "caps:escape";
+  # services.xserver.xkb.options = "caps:escape";
 
   services.printing.enable = true; 
 
@@ -154,6 +154,7 @@
      xss-lock
      slock
      lightdm
+     vscode # Don't tell anyone please, but sometimes I have no choice
    ];
 
    environment.variables = rec {
