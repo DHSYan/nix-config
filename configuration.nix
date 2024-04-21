@@ -156,6 +156,8 @@
      slock
      lightdm
      vscode # Don't tell anyone please, but sometimes I have no choice
+     vial
+     via
    ];
 
    environment.variables = rec {
