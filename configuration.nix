@@ -189,10 +189,19 @@
       enable = true;
       enableSSHSupport = true;
   };
-  security.pam.services = {
-      login.u2fAuth = true;
-      sudo.u2fAuth = true;
+  security.pam = {
+      u2f = {
+          control = "required";
+      };
+      yubico = {
+          control = "required";
+      };
+      services = {
+          login.u2fAuth = true;
+          sudo.u2fAuth = true;
+      };
   };
+  
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
