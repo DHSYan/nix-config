@@ -20,7 +20,8 @@
   # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
   # Set your time zone.
-  time.timeZone = "Australia/Sydney";
+  # time.timeZone = "Australia/Sydney";
+  time.timeZone = "Asia/Taipei";
 
   console.useXkbConfig = true;
 
@@ -61,7 +62,7 @@
 
   hardware.bluetooth = {
       enable = true;
-      powerOnBoot = true;
+      powerOnBoot = true; # does this even work???
   };
   services.blueman.enable = true;
 
