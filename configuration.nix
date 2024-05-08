@@ -29,10 +29,6 @@
   services.xserver.enable = true;
   services.xserver.autorun = false;
   services.xserver.displayManager.startx.enable = true;
-  # services.xserver.displayManager.sessionCommands =
-  #     ${pkgs.xorg.xmodmap}/bin/xmodmap "${pkgs.writeText  "xkb-layout" ''
-  #         keycode 64 = Control_R
-  #     ''}";
   services.xserver.dpi = 110;
 
   services.xserver.windowManager.dwm.enable = true;
