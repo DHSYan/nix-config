@@ -26,6 +26,9 @@
           TwinklePhone = {
               psk = "@TWINKLEPHONE_PSK@";
           };
+          "2F1" = {
+              psk = "@TAIWAN_PSK@";
+          };
       };
   };
 
