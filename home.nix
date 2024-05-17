@@ -48,6 +48,7 @@
     ".config/git/.gitignore_global".source = ~/.dotfiles/git/.gitignore_global;
 
     ".config/zsh/.zshrc".source = ~/.dotfiles/zsh/.zshrc;
+    ".config/zsh/.p10k.zsh".source = ~/.dotfiles/zsh/.p10k.zsh;
 
     ".config/wezterm".source = ~/.dotfiles/wezterm;
 
@@ -74,7 +75,7 @@
 
   # Apparently this is not setting my variable
   home.sessionVariables = {
-    EDITOR = "nvim";
+    # EDITOR = "nvim";
     ZDOTDIR = "$HOME/.config/zsh";
     XDG_CONFIG_HOME = "$HOME/.config";
   };
