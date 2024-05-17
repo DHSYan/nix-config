@@ -170,7 +170,7 @@
    ];
 
    environment.variables = rec {
-       # EDITOR = "nvim";
+       EDITOR = "nvim";
        XDG_CONFIG_HOME = "$HOME/.config";
        ZDOTDIR = "$HOME/.config/zsh";
    };

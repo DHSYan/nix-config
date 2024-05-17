@@ -75,7 +75,7 @@
 
   # Apparently this is not setting my variable
   home.sessionVariables = {
-    # EDITOR = "nvim";
+    EDITOR = "nvim";
     ZDOTDIR = "$HOME/.config/zsh";
     XDG_CONFIG_HOME = "$HOME/.config";
   };
