@@ -50,6 +50,16 @@
   services.xserver.xkb.variant = "dvorak";
   services.xserver.xkb.options = "caps:escape";
 
+  # i18n = {
+  #     defaultLocale = "fr_FR.UTF-8";
+  #     inputMethod = {
+  #         enabled = "fcitx5";
+  #         fcitx5.addons = with pkgs; [
+  #             fcitx5-chewing
+  #         ];
+  #     };
+  # };
+
   services.printing.enable = true; 
 
   # Enable sound.
@@ -155,6 +165,8 @@
      vscode # Don't tell anyone please, but sometimes I have no choice
      vial
      via
+     # fcitx5-with-addons
+     wmctrl
    ];
 
    environment.variables = rec {
