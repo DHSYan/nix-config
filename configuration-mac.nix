@@ -4,7 +4,7 @@
   imports =
     [ 
       /etc/nixos/apple-silicon-support
-      ./configuration-arm.nix
+      ./configuration-aarch.nix
     ];
 
   system.stateVersion = "24.05"; 

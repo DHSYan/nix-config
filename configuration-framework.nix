@@ -3,7 +3,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./configuration.nix
+      ./configuration-x86.nix
     ];
 
   networking.hostName = "nixos"; 

@@ -41,7 +41,7 @@
 		dwm = prev.dwm.overrideAttrs (old: { src = /home/tzen/dwm ;});
 		slstatus = prev.slstatus.overrideAttrs (old: { src = /home/tzen/dwm/slstatus ;});
         # neovim = prev.neovim.overrideAttrs (old: { src = /home/tzen/neovim; }); how to make this work?
-        discord = prev.discord.overrideAttrs (_: { src = builtins.fetchTarball https://discord.com/api/download?platform=linux&format=tar.gz; });
+        # discord = prev.discord.overrideAttrs (_: { src = builtins.fetchTarball https://discord.com/api/download?platform=linux&format=tar.gz; });
 	})
   ];
 
@@ -119,8 +119,7 @@
      libfido2
      sshfs-fuse
      xorg.xsetroot
-     spotify
-     discord
+     # discord
      lua
      luajit
      gnumake
