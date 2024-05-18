@@ -62,6 +62,9 @@
 
   services.printing.enable = true; 
 
+  # Enable sound.
+  sound.enable = true;
+  hardware.pulseaudio.enable = true;
 
   hardware.bluetooth = {
       enable = true;
@@ -215,6 +218,6 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  # system.stateVersion = "23.11"; 
+  system.stateVersion = "23.11"; 
 }
 
