@@ -167,6 +167,10 @@
      via
      # fcitx5-with-addons
      wmctrl
+     bat
+     delta
+     eza
+     thefuck
    ];
 
    environment.variables = rec {
