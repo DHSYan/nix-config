@@ -7,6 +7,9 @@
       ./configuration.nix
     ];
 
+  # Enable sound.
+  sound.enable = true;
+  hardware.pulseaudio.enable = true;
 
   networking.hostName = "nixos"; 
   services.xserver.videoDrivers = [ "nvidia" ]; # I mean the desktop could work without this, but the resolution won't be changable

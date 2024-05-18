@@ -64,5 +64,10 @@
 	};
   };
   services.thermald.enable = true;
+
+  # Enable sound.
+  sound.enable = true;
+  hardware.pulseaudio.enable = true;
+
   system.stateVersion = "23.11"; 
 }

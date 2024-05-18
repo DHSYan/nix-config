@@ -95,7 +95,7 @@
    environment.systemPackages = with pkgs; [
      dmenu
      wezterm
-     google-chrome
+     brave
      gcc
      clang
      neovim 
