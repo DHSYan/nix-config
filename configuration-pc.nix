@@ -10,4 +10,5 @@
 
   networking.hostName = "nixos"; 
   services.xserver.videoDrivers = [ "nvidia" ]; # I mean the desktop could work without this, but the resolution won't be changable
+  system.stateVersion = "23.11"; 
 }

@@ -29,6 +29,9 @@
         pc = nixpkgs.lib.nixosSystem {
             modules = [ ./configuration-pc.nix ]; 
         };
+        mac = nixpkgs.lib.nixosSystem {
+            modules = [ ./configuration-mac.nix ]; 
+        };
       };
 
       homeConfigurations.tzen = home-manager.lib.homeManagerConfiguration {
