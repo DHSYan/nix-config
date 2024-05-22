@@ -171,6 +171,7 @@
      delta
      eza
      thefuck
+     teams-for-linux
    ];
 
    environment.variables = rec {
