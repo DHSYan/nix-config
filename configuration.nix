@@ -20,8 +20,8 @@
   # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
   # Set your time zone.
-  # time.timeZone = "Australia/Sydney";
-  time.timeZone = "Asia/Taipei";
+  time.timeZone = "Australia/Sydney";
+  # time.timeZone = "Asia/Taipei";
 
   console.useXkbConfig = true;
 
