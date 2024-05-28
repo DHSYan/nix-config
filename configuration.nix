@@ -172,6 +172,7 @@
      eza
      thefuck
      teams-for-linux
+     R
    ];
 
    environment.variables = rec {
