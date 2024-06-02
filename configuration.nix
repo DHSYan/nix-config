@@ -173,6 +173,7 @@
      thefuck
      teams-for-linux
      R
+     p3x-onenote
    ];
 
    environment.variables = rec {
