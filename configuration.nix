@@ -143,7 +143,7 @@
      xorg.libxkbfile
      spotifyd
      tree-sitter
-     nodejs_20
+     # nodejs_20
      zathura
      localsend
      bitwarden
