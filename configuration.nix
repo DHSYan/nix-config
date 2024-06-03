@@ -180,6 +180,7 @@
        EDITOR = "nvim";
        XDG_CONFIG_HOME = "$HOME/.config";
        ZDOTDIR = "$HOME/.config/zsh";
+       NIX_BUILD_SHELL = "zsh nix-shell";
    };
 
    fonts.packages = with pkgs; [
