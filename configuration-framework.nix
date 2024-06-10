@@ -33,8 +33,9 @@
   };
 
   services.xserver.synaptics.horizontalScroll = true;
-  services.xserver.libinput.enable = true; #touchpad
-  services.xserver.libinput.touchpad = {
+  # services.xserver.libinput.enable = true; #touchpad
+  services.libinput.enable = true;
+  services.libinput.touchpad = {
       naturalScrolling = true;
       tappingButtonMap = "lmr";
       tapping = false;
