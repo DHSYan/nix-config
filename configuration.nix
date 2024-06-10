@@ -174,6 +174,7 @@
      teams-for-linux
      R
      p3x-onenote
+     protonmail-desktop
    ];
 
    environment.variables = rec {
