@@ -17,7 +17,7 @@
           };
           eduroam = {
               auth = ''
-                  identity="z5521807@ad.unsw.edu.au"
+                  identity="@ZID@"
                   password="@EDUROAM_PSK@"
                   key_mgmt=WPA-EAP
                   eap=PEAP
