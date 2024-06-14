@@ -116,7 +116,7 @@
      zsh
      fzf
      sxhkd
-     texliveSmall
+     texliveMedium
      racket
      neofetch
      libfido2
