@@ -175,6 +175,9 @@
      R
      p3x-onenote
      protonmail-desktop
+     mdcat
+     mdhtml
+     telegram-desktop
    ];
 
    environment.variables = rec {
