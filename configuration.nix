@@ -178,6 +178,7 @@
      mdcat
      mdhtml
      telegram-desktop
+     icloudpd
    ];
 
    environment.variables = rec {
