@@ -90,7 +90,8 @@
   };
 
   nixpkgs.config.permittedInsecurePackages = [
-	  "electron-25.9.0"
+      "electron-25.9.0"
+      "adobe-reader-9.5.5"
   ];
 
   # List packages installed in system profile. To search, run:
@@ -179,6 +180,7 @@
      mdhtml
      telegram-desktop
      icloudpd
+     adobe-reader
    ];
 
    environment.variables = rec {
