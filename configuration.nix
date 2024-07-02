@@ -181,6 +181,7 @@
      telegram-desktop
      icloudpd
      adobe-reader
+     virtualbox
    ];
 
    environment.variables = rec {
