@@ -92,6 +92,7 @@
   # virtualisation
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
+  virtualisation.spiceUSBRedirection.enable = true;
 
   nixpkgs.config.permittedInsecurePackages = [
       "electron-25.9.0"
@@ -188,6 +189,11 @@
      virtualbox
      qemu
      virt-manager
+     spice 
+     spice-gtk
+     spice-protocol
+     win-virtio
+     win-spice
    ];
 
    environment.variables = rec {
