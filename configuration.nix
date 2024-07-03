@@ -182,6 +182,8 @@
      icloudpd
      adobe-reader
      virtualbox
+     qemu
+     virt-manager
    ];
 
    environment.variables = rec {
