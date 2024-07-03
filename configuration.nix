@@ -84,10 +84,14 @@
   users.users.tzen = {
     isNormalUser = true;
     shell = pkgs.zsh;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "libvirtd" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
     ];
   };
+
+  # virtualisation
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
 
   nixpkgs.config.permittedInsecurePackages = [
       "electron-25.9.0"
