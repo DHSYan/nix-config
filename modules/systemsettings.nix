@@ -5,6 +5,8 @@
   console.useXkbConfig = true;
 
   services.printing.enable = true; 
+
+  programs.zsh.enable = true;
   
   # Enable sound.
   sound.enable = true;

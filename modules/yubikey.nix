@@ -1,4 +1,4 @@
-{ ... }: 
+{ pkgs, ... }: 
 {
   # Yubikey nice to have - Not worknig yet tho
   services.udev.packages= [ pkgs.yubikey-personalization ];
