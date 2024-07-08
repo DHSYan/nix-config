@@ -1,41 +1,53 @@
 {
-  description = "Flakes for Everything";
+    description = "Flakes for Everything";
 
-  inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # @attrset
+    # Defines all the dependencies of this flake
+    # These will get passed as arguments into the outputs function below
+    inputs = {
+        nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
+        home-manager = {
+            url = "github:nix-community/home-manager";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+
+        nixos-hardware = {
+            url = "github:NixOS/nixos-hardware/master";
+        };
+
+        neovim-nightly = {
+            url = "github:nix-community/neovim-nightly-overlay/master";
+        };
     };
-
-    nixos-hardware = {
-        url = "github:NixOS/nixos-hardware/master";
-    };
-  };
-
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }@inputs:
+    # @function => attrset
+    # the return value represent the build result
+    outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }@inputs:
     let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+        system = "x86_64-linux";
+        pkgs = nixpkgs.legacyPackages.${system};
     in {
-      nixosConfigurations = {
-        framework = nixpkgs.lib.nixosSystem {
-            modules = [ 
-                ./configuration-framework.nix  
-                nixos-hardware.nixosModules.framework-11th-gen-intel
-            ]; 
+        nixosConfigurations = {
+            framework = nixpkgs.lib.nixosSystem {
+                inherit system;
+                specialArgs = { inherit inputs; };
+                modules = [ 
+                    ./configuration-framework.nix
+                    nixos-hardware.nixosModules.framework-11th-gen-intel
+                ]; 
+            };
+            pc = nixpkgs.lib.nixosSystem {
+                inherit system;
+                specialArgs = { inherit inputs; };
+                modules = [ ./configuration-pc.nix ]; 
+            };
         };
-        pc = nixpkgs.lib.nixosSystem {
-            modules = [ ./configuration-pc.nix ]; 
+
+        homeConfigurations.tzen = home-manager.lib.homeManagerConfiguration {
+            inherit pkgs;
+
+            modules = [ ./home.nix ];
+
         };
-      };
-
-      homeConfigurations.tzen = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-
-        modules = [ ./home.nix ];
-
-      };
     };
 }

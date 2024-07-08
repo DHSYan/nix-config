@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 {
   imports =
@@ -107,7 +107,7 @@
      google-chrome
      gcc
      clang
-     neovim 
+     inputs.neovim-nightly.packages.${pkgs.system}.default
      ripgrep
      tldr
      tmux
