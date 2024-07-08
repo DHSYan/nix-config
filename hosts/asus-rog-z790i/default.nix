@@ -1,14 +1,13 @@
 { config, pkgs, ... }: 
 {
     imports = [
-        # ../../modules/nixsettings.nix
-        # ../../modules/systempkgs.nix
-        # ../../modules/x11.nix
-        # ../../modules/user.nix
-        # ../../modules/fonts.nix
-        # ../../modules/yubikey.nix
-        # ../../modules/systemsettings.nix
-        ../../modules/default.nix
+        ../../modules/nixsettings.nix
+        ../../modules/systempkgs.nix
+        ../../modules/x11.nix
+        ../../modules/user.nix
+        ../../modules/fonts.nix
+        ../../modules/yubikey.nix
+        ../../modules/systemsettings.nix
         ./hardware-configuration.nix
     ];
 
