@@ -1,5 +1,5 @@
 {
-    description = "Flakes for Everything";
+    description = "Sean's Nix Config";
 
     # @attrset
     # Defines all the dependencies of this flake
@@ -39,7 +39,9 @@
             pc = nixpkgs.lib.nixosSystem {
                 inherit system;
                 specialArgs = { inherit inputs; };
-                modules = [ ./configuration-pc.nix ]; 
+                modules = [ 
+                    ./hosts/asus-rog-z790i
+                ]; 
             };
         };
 
