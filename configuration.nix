@@ -149,7 +149,6 @@
      xorg.libxkbfile
      spotifyd
      tree-sitter
-     # nodejs_20
      zathura
      localsend
      bitwarden
@@ -194,6 +193,9 @@
      spice-protocol
      win-virtio
      win-spice
+     pdftk
+     pdfarranger
+     nodejs_22
    ];
 
    environment.variables = rec {
