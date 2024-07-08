@@ -26,5 +26,5 @@
             target = "./throw-away-code/init.txt";
             text = "hi"; 
         };
-    }
+    };
 }
