@@ -1,16 +1,16 @@
-{ pkgs, ... }: 
+{ inputs, pkgs, ... }: 
 {
     security.polkit.enable = true;
     services.xserver = {
         enable = true;
         displayManager = {
-            defaultSession = "hyprland";
             gdm = {
                 enable = true;
                 wayland = true;
             };
         };
     };
+    services.displayManager.defaultSession = "hyprland";
 
     programs.hyprland = {
         enable = true;
@@ -18,7 +18,7 @@
         xwayland.enable = true;
         portalPackage = pkgs.xdg-desktop-portal-hyprland;
         systemd.setPath.enable = true;
-        package = pkgs.hyprland;
+        package = inputs.hyprland-nightly.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     };
 
     xdg.portal = {
@@ -40,7 +40,9 @@
     };
 
     hardware = {
-        opengl.enable = true;
+        # opengl.enable = true;
+        graphics.enable = true;
+        graphics.enable32Bit = true;
         nvidia.modesetting.enable = true;
     };
 }
