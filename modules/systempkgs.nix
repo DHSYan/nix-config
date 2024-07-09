@@ -120,7 +120,9 @@
             libnotify
             swww #wallpaper deamen
             kitty
+            alacritty
             rofi-wayland
             networkmanagerapplet
+            wl-clipboard
    ];
 }
