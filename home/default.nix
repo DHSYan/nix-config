@@ -4,7 +4,7 @@
     imports = [
         ./programs
         ./files
-        ./envvars
+        # ./envvars
     ];
 
     home = {

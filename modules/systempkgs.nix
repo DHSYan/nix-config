@@ -29,9 +29,9 @@
             wget
             git
             xclip
-            xorg.xdpyinfo
-            xorg.xinput
-            xorg.xev
+            # xorg.xdpyinfo
+            # xorg.xinput
+            # xorg.xev
             feh
             zsh
             fzf
@@ -41,7 +41,7 @@
             neofetch
             libfido2
             sshfs-fuse
-            xorg.xsetroot
+            # xorg.xsetroot
             spotify
             discord
             lua
@@ -59,8 +59,8 @@
             flameshot
             tlp
             home-manager
-            xorg.libX11
-            xorg.libxkbfile
+            # xorg.libX11
+            # xorg.libxkbfile
             spotifyd
             tree-sitter
             zathura
@@ -72,12 +72,12 @@
             lorien
             blueman
             copyq
-            xorg.xhost
+            # xorg.xhost
             albert
             pam_u2f
             gnupg
             python3
-            xorg.xmodmap
+            # xorg.xmodmap
             xss-lock
             slock
             lightdm

@@ -3,11 +3,14 @@
     imports = [
         ../../modules/nixsettings.nix
         ../../modules/systempkgs.nix
-        ../../modules/x11.nix
+        # ../../modules/x11.nix
+        ../../modules/hyprland.nix
         ../../modules/user.nix
         ../../modules/fonts.nix
         ../../modules/yubikey.nix
         ../../modules/systemsettings.nix
+        ../../modules/sysenvvars.nix
+        ../../modules/keyboard.nix
         ./hardware-configuration.nix
     ];
 
