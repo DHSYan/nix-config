@@ -8,6 +8,7 @@
         ../../modules/fonts.nix
         ../../modules/yubikey.nix
         ../../modules/systemsettings.nix
+        ../../modules/sysenvvars.nix
         ./hardware-configuration.nix
     ];
 

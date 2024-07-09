@@ -26,5 +26,7 @@
             target = "./throw-away-code/init.txt";
             text = "hi"; 
         };
+
+        ".config/kitty".source = ~/.dotfiles/kitty;
     };
 }
