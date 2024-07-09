@@ -4,11 +4,14 @@
     [ # Include the results of the hardware scan.
         ../../modules/nixsettings.nix
         ../../modules/systempkgs.nix
-        ../../modules/x11.nix
+        # ../../modules/x11.nix
+        ../../modules/hyprland.nix
         ../../modules/user.nix
         ../../modules/fonts.nix
         ../../modules/yubikey.nix
         ../../modules/systemsettings.nix
+        ../../modules/sysenvvars.nixK
+        ../../modules/keyboard.nix
         ./hardware-configuration.nix
     ];
 
