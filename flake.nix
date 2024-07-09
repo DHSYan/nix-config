@@ -32,7 +32,7 @@
                 inherit system;
                 specialArgs = { inherit inputs; };
                 modules = [ 
-                    ./configuration-framework.nix
+                    ./hosts/framework
                     nixos-hardware.nixosModules.framework-11th-gen-intel
                 ]; 
             };
