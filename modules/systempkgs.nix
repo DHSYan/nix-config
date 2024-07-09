@@ -110,5 +110,7 @@
             pdftk
             pdfarranger
             nodejs_22
+            hyprland
+            ly
    ];
 }

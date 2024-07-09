@@ -1,9 +1,33 @@
 { pkgs, ... }: 
 {
+    security.polkit.enable = true;
+    services.xserver = {
+        enable = true;
+        displayManager = {
+            defaultSession = "hyprland";
+            gdm = {
+                enable = true;
+                wayland = true;
+            };
+        };
+    };
+
     programs.hyprland = {
         enable = true;
         # nvidiaPatches = true;
         xwayland.enable = true;
+        portalPackage = pkgs.xdg-desktop-portal-hyprland;
+        systemd.setPath.enable = true;
+        package = pkgs.hyprland;
+    };
+
+    services.hypridle = {
+        enable = true;
+
+    };
+    programs.hyprlock = {
+        enable = true;
+
     };
 
     environment.sessionVariables = {
