@@ -111,6 +111,15 @@
             pdfarranger
             nodejs_22
             hyprland
-            ly
+            waybar
+            eww
+            (waybar.overrideAttrs (old: {
+                mesonFlags = old.mesonFlags ++ [ "-Dexperimental=true" ];
+                }))
+            dunst
+            libnotify
+            swww #wallpaper deamen
+            kitty
+            rofi-wayland
    ];
 }

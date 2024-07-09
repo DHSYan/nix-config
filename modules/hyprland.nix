@@ -21,6 +21,11 @@
         package = pkgs.hyprland;
     };
 
+    xdg.portal = {
+        enable = true;
+        extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    };
+
     services.hypridle = {
         enable = true;
 
