@@ -121,5 +121,6 @@
             swww #wallpaper deamen
             kitty
             rofi-wayland
+            networkmanagerapplet
    ];
 }
