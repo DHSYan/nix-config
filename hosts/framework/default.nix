@@ -10,7 +10,7 @@
         ../../modules/fonts.nix
         ../../modules/yubikey.nix
         ../../modules/systemsettings.nix
-        ../../modules/sysenvvars.nixK
+        ../../modules/sysenvvars.nix
         ../../modules/keyboard.nix
         ./hardware-configuration.nix
     ];
