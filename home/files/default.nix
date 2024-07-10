@@ -9,7 +9,6 @@
         ".config/zsh/.p10k.zsh".source = ~/.dotfiles/zsh/.p10k.zsh;
 
         ".config/wezterm".source = ~/.dotfiles/wezterm;
-        ".config/kitty".source = ~/.dotfiles/kitty;
 
         ".config/sxhkd".source = ~/.dotfiles/sxhkd;
 
@@ -28,6 +27,7 @@
             text = "hi"; 
         };
 
+        ".config/kitty".source = ~/.dotfiles/kitty;
         ".config/hypr".source = ~/.dotfiles/hypr;
     };
 }
