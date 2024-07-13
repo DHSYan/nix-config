@@ -109,7 +109,7 @@
             win-spice
             pdftk
             pdfarranger
-            nodejs_22
+            # nodejs_22
             hyprland
             waybar
             eww
