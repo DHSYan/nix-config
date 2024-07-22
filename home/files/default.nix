@@ -26,6 +26,10 @@
             target = "./throw-away-code/init.txt";
             text = "hi"; 
         };
+        "./.trash/init.trash" = {
+            target = "./.trash/.init.trash";
+            text = "this is iiniting trash"; 
+        };
 
         ".config/kitty".source = ~/.dotfiles/kitty;
     };
