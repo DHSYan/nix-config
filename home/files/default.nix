@@ -29,5 +29,12 @@
 
         ".config/kitty".source = ~/.dotfiles/kitty;
         ".config/hypr".source = ~/.dotfiles/hypr;
+
+        "./.trash/init.trash" = {
+            target = "./.trash/.init.trash";
+            text = "this is iiniting trash"; 
+        };
+
+        ".config/kitty".source = ~/.dotfiles/kitty;
     };
 }
