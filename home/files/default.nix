@@ -34,7 +34,5 @@
             target = "./.trash/.init.trash";
             text = "this is iiniting trash"; 
         };
-
-        ".config/kitty".source = ~/.dotfiles/kitty;
     };
 }
