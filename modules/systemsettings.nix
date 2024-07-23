@@ -9,7 +9,7 @@
   programs.zsh.enable = true;
   
   # Enable sound.
-  sound.enable = true;
+  # sound.enable = true;
   # hardware.pulseaudio.enable = true;
   security.rtkit.enable = true;
   services.pipewire = { 

@@ -124,5 +124,7 @@
             rofi-wayland
             networkmanagerapplet
             wl-clipboard
+            lazygit
+            zed-editor
    ];
 }
