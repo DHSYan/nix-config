@@ -24,7 +24,7 @@
     # the return value represent the build result
     outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }@inputs:
     let
-        system = "x86_64-linux";
+        system = [ "x86_64-linux" ];
         pkgs = nixpkgs.legacyPackages.${system};
     in {
         nixosConfigurations = {
@@ -41,6 +41,13 @@
                 specialArgs = { inherit inputs; };
                 modules = [ 
                     ./hosts/asus-rog-z790i
+                ]; 
+            };
+            nixmac = nixpkgs.lib.nixosSystem {
+                inherit system;
+                specialArgs = { inherit inputs; };
+                modules = [ 
+                    ./hosts/macbookpro16
                 ]; 
             };
         };
