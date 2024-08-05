@@ -49,6 +49,7 @@ the project is even the correct way to do things)
 - [ ] login not protected by yubi key
 - [ ] Look into Nixhelper?
 - [ ] Overlay Neovim, I NEED NIGHTLY VERSION
+- [ ] Make Nixflake compativie with all system type
 
 # Sources that helped/inspired me 
 - [No Boilerplate's Video led me to discover NixOS](https://www.youtube.com/watch?v=CwfKlX3rA6E&t=484s)
