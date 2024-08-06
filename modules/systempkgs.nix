@@ -126,5 +126,6 @@
             wl-clipboard
             lazygit
             zed-editor
+            brightnessctl
    ];
 }
