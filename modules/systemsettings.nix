@@ -1,6 +1,6 @@
 { ... }: 
 {
-  time.timeZone = "Australia/Sydney";
+  time.timeZone = "America/Vancouver";
 
   console.useXkbConfig = true;
 
