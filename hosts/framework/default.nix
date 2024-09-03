@@ -29,7 +29,7 @@
           };
           eduroam = {
               auth = ''
-                  identity="@EDURORAM_ID@"
+                  identity="@EDUROAM_ID@"
                   password="@EDUROAM_PSK@"
                   key_mgmt=WPA-EAP
                   eap=PEAP
