@@ -92,6 +92,7 @@
             thefuck
             teams-for-linux
             R
+            rstudio
             p3x-onenote
             protonmail-desktop
             mdcat
