@@ -128,5 +128,6 @@
             lazygit
             zed-editor
             brightnessctl
+            zoom-us
    ];
 }
