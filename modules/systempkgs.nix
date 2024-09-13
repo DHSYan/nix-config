@@ -77,6 +77,8 @@
             pam_u2f
             gnupg
             python3
+            # python312Packages.pip
+            python312Packages.pandas
             # xorg.xmodmap
             xss-lock
             slock
@@ -129,5 +131,6 @@
             zed-editor
             brightnessctl
             zoom-us
+            anki
    ];
 }
