@@ -24,7 +24,7 @@
       userControlled.enable = true;
       environmentFile = "/etc/wireless.env";
       networks = {
-          Pog = {
+          TELUS7918 = {
               psk = "@POG_PSK@";
           };
           eduroam = {
