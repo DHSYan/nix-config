@@ -22,24 +22,24 @@
   networking.wireless =  {
       enable = true;  # Enables wireless support via wpa_supplicant.
       userControlled.enable = true;
-      environmentFile = "/etc/wireless.env";
+      secretsFile = "/etc/wireless.env";
       networks = {
           TELUS7918 = {
-              psk = "@POG_PSK@";
+              psk = "ext:POG_PSK";
           };
           eduroam = {
               auth = ''
-                  identity="@EDUROAM_ID@"
-                  password="@EDUROAM_PSK@"
+                  identity="ext:EDUROAM_ID"
+                  password="ext:EDUROAM_PSK"
                   key_mgmt=WPA-EAP
                   eap=PEAP
               '';
           };
           TwinklePhone = {
-              psk = "@TWINKLEPHONE_PSK@";
+              psk = "ext:TWINKLEPHONE_PSK";
           };
           "2F1" = {
-              psk = "@TAIWAN_PSK@";
+              psk = "ext:TAIWAN_PSK";
           };
       };
   };
