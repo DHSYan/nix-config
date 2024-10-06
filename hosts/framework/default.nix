@@ -8,7 +8,7 @@
         ../../modules/hyprland.nix
         ../../modules/user.nix
         ../../modules/fonts.nix
-        ../../modules/yubikey.nix
+        # ../../modules/yubikey.nix
         ../../modules/systemsettings.nix
         ../../modules/sysenvvars.nix
         ../../modules/keyboard.nix
@@ -22,24 +22,24 @@
   networking.wireless =  {
       enable = true;  # Enables wireless support via wpa_supplicant.
       userControlled.enable = true;
-      secretsFile = "/etc/wireless.env";
+      secretsFile = "/etc/wireless.conf";
       networks = {
           TELUS7918 = {
-              psk = "ext:POG_PSK";
+              pskRaw = "ext:pog_psk";
           };
           eduroam = {
               auth = ''
-                  identity="ext:EDUROAM_ID"
-                  password="ext:EDUROAM_PSK"
                   key_mgmt=WPA-EAP
                   eap=PEAP
+                  identity="dhsyan@ubc.ca"
+                  password=ext:eduroam_psk
               '';
           };
           TwinklePhone = {
-              psk = "ext:TWINKLEPHONE_PSK";
+              pskRaw = "ext:twinklephone_psk";
           };
           "2F1" = {
-              psk = "ext:TAIWAN_PSK";
+              pskRaw = "ext:taiwan_psk";
           };
       };
   };
@@ -78,5 +78,5 @@
   };
   services.thermald.enable = true;
   
-  system.stateVersion = "23.11"; 
+  system.stateVersion = "24.05"; 
 }
