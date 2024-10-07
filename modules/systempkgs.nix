@@ -132,5 +132,6 @@
             brightnessctl
             zoom-us
             anki
+            watershot
    ];
 }
