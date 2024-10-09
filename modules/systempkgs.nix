@@ -19,6 +19,7 @@
             dmenu
             wezterm
             google-chrome
+            brave
             gcc
             clang
             inputs.neovim-nightly.packages.${pkgs.system}.default
