@@ -41,6 +41,7 @@
           "2F1" = {
               pskRaw = "ext:taiwan_psk";
           };
+          "Starbucks WiFi" = {};
       };
   };
 
