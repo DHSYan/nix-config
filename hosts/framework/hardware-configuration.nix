@@ -8,18 +8,18 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/73605a88-8d3d-4fb6-8c8e-6788de1c4b4e";
+    { device = "/dev/disk/by-uuid/89d0a6ad-63ba-4758-9010-dff02dce2438";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/E3B6-CAE7";
+    { device = "/dev/disk/by-uuid/AD08-0425";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
@@ -31,6 +31,7 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
+  # networking.interfaces.enp0s13f0u4u4.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp170s0.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
