@@ -46,6 +46,15 @@
                     ./hosts/asus-rog-z790i
                 ]; 
             };
+	    
+            moab = nixpkgs.lib.nixosSystem {
+                inherit system;
+                specialArgs = { inherit inputs; };
+                modules = [ 
+                    ./hosts/moab
+		    nixos-hardware.nixosModules.framework-13-7040-amd
+                ]; 
+            };
         };
 
         homeConfigurations.tzen = home-manager.lib.homeManagerConfiguration {
