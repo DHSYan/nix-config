@@ -34,5 +34,7 @@
             target = "./.trash/.init.trash";
             text = "this is iiniting trash"; 
         };
+
+        ".config/waybar".source = ~/.dotfiles/waybar;
     };
 }
