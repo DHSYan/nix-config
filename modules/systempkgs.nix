@@ -138,5 +138,6 @@
             swappy
             kmonad
             pavucontrol
+            hyprlock
    ];
 }
