@@ -137,5 +137,6 @@
             grim
             swappy
             kmonad
+            pavucontrol
    ];
 }
