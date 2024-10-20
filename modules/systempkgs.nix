@@ -116,17 +116,21 @@
             nodejs_22
             hyprland
             waybar
+            swaynotificationcenter
             eww
             (waybar.overrideAttrs (old: {
                 mesonFlags = old.mesonFlags ++ [ "-Dexperimental=true" ];
                 }))
             dunst
             libnotify
-            swww #wallpaper deamen
+            # swww #wallpaper deamen
             kitty
+            hyprpaper
             alacritty
             rofi-wayland
+            wofi
             networkmanagerapplet
+            wpa_supplicant_gui
             wl-clipboard
             lazygit
             zed-editor
@@ -139,5 +143,8 @@
             kmonad
             pavucontrol
             hyprlock
+            hyprshot
+            playerctl
    ];
+
 }
