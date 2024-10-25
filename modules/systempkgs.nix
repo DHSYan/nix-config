@@ -145,6 +145,7 @@
             hyprlock
             hyprshot
             playerctl
+            nh
    ];
 
 }
