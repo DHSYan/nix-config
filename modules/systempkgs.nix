@@ -146,6 +146,7 @@
             hyprshot
             playerctl
             nh
+            whatsapp-for-linux
    ];
 
 }
