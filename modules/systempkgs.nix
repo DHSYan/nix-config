@@ -75,7 +75,6 @@
             copyq
             # xorg.xhost
             albert
-            pam_u2f
             gnupg
             python3
             # python312Packages.pip
@@ -147,6 +146,7 @@
             playerctl
             nh
             whatsapp-for-linux
+
    ];
 
 }
