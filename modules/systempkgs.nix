@@ -146,6 +146,8 @@
             playerctl
             nh
             whatsapp-for-linux
+            ticktick
+            markdownlint-cli
 
    ];
 
