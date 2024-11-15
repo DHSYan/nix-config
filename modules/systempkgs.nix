@@ -148,7 +148,7 @@
             whatsapp-for-linux
             ticktick
             markdownlint-cli
-
+            gh #github cli
    ];
 
 }
