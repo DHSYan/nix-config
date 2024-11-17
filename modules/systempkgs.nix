@@ -149,7 +149,7 @@
             ticktick
             markdownlint-cli
             kanata
-
+            gh #github cli
    ];
 
 }
