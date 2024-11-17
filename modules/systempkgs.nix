@@ -150,6 +150,8 @@
             markdownlint-cli
             kanata
             gh #github cli
+
+            inputs.zen-browser.packages."${system}".default
    ];
 
 }

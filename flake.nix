@@ -22,6 +22,9 @@
     hyprland-nightly = {
       url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     };
+
+    zen-browser.url = "github:MarceColl/zen-browser-flake";
+
   };
   # @function => attrset
   # the return value represent the build result
@@ -43,6 +46,7 @@
           inherit system;
           specialArgs = {
             inherit inputs;
+            inherit system;
           };
           modules = [
             ./hosts/framework
@@ -53,6 +57,7 @@
           inherit system;
           specialArgs = {
             inherit inputs;
+            inherit system;
           };
           modules = [
             ./hosts/asus-rog-z790i
@@ -63,6 +68,7 @@
           inherit system;
           specialArgs = {
             inherit inputs;
+            inherit system;
           };
           modules = [
             ./hosts/moab
