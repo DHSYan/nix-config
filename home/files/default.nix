@@ -28,6 +28,7 @@
         };
 
         ".config/kitty".source = ~/.dotfiles/kitty;
+        ".config/alacritty".source = ~/.dotfiles/alacritty;
         ".config/hypr".source = ~/.dotfiles/hypr;
 
         "./.trash/init.trash" = {
