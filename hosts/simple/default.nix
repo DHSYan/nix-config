@@ -1,33 +1,20 @@
-{ pkgs, ... }:
+{ ... }:
 {
   imports =
     [ # Include the results of the hardware scan.
         ../../modules/nixsettings.nix
-        ../../modules/systempkgs.nix
         ../../modules/hyprland.nix
         ../../modules/user.nix
-        ../../modules/fonts.nix
-        ../../modules/yubikey.nix
         ../../modules/systemsettings.nix
         ../../modules/sysenvvars.nix
         ../../modules/keyboard.nix
-        ../../modules/vm.nix
-        ../../modules/drawingtablet.nix
         ./hardware-configuration.nix
     ];
 
+
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  environment.systemPackages = with pkgs; [
-    google-chrome
-    neovim
-    git
-    wget
-    home-manager
-    kitty
-    hyprland
-  ];
 
   networking.hostName = "moab"; 
   networking.wireless =  {
