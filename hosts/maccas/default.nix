@@ -45,7 +45,7 @@
             thefuck
             teams
             R
-            protonmail-desktop
+            #protonmail-desktop
             mdcat
             telegram-desktop
             pdftk

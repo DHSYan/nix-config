@@ -124,6 +124,7 @@
         };
 
         darwinConfigurations."Ding-Hans-MacBook-Pro" = nix-darwin.lib.darwinSystem {
+            system = "aarch64_darwin";
             specialArgs =  { inherit inputs; };
             modules = [ 
                 ./hosts/maccas
@@ -145,7 +146,7 @@
                             "homebrew/homebrew-cask" = homebrew-cask;
                             "homebrew/homebrew-bundle" = inputs.homebrew-bundle; 
                             "nikitabobko/homebrew-tap" = inputs.nikitabobko-homebrew-tap;
-                            "koekeishiya/homebrew-formulae" = inputs.yabai-homebrew-tap;
+                            # "koekeishiya/homebrew-formulae" = inputs.yabai-homebrew-tap;
                         };
 
                         # Optional: Enable fully-declarative tap management
