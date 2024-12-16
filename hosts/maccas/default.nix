@@ -6,6 +6,7 @@
         ./system-settings.nix
         ./finder.nix
         ./dock.nix
+        ./clock.nix
     ];
 
     # List packages installed in system profile. To search by name, run:
