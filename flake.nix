@@ -63,9 +63,9 @@
       flake-utils,
       ...
     }@inputs:
-    flake-utils.lib.eachDefaultSystem (
-      system:
-      let
+    let 
+    set1 = let
+        system = "x86_64-linux";
         pkgs = nixpkgs.legacyPackages.${system};
       in
       {
@@ -75,6 +75,7 @@
             specialArgs = {
               inherit inputs;
               inherit system;
+
             };
             modules = [
               ./hosts/framework
@@ -111,7 +112,14 @@
           modules = [ ./home ];
 
         };
+        };
 
+set2 = flake-utils.lib.eachDefaultSystem (
+      system:
+      let
+        pkgs = nixpkgs.legacyPackages.${system};
+      in
+      {
         devShells = {
           default = pkgs.mkShell {
             packages = with pkgs; [
@@ -132,4 +140,9 @@
         };
       }
     );
+
+return=set1 // set2;
+    in 
+    return;
+
 }
