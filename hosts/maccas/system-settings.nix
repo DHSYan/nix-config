@@ -9,6 +9,9 @@
         };
         WindowManager.EnableStandardClickToShowDesktop = false;
         # HIHideMenuBar = true;
+
+        # true for display don't have separete spaces
+        spaces.spans-displays = true;
     };
     system.defaults.NSGlobalDomain._HIHideMenuBar = false;
 
@@ -18,5 +21,6 @@
         enableKeyMapping = true;
         remapCapsLockToEscape = true;
     };
+
 }
 
