@@ -7,7 +7,6 @@
             KeyRepeat = 2;
             ApplePressAndHoldEnabled = false;
         };
-        dock.autohide = true;
         WindowManager.EnableStandardClickToShowDesktop = false;
         # HIHideMenuBar = true;
     };
