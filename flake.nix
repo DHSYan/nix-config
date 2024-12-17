@@ -52,6 +52,7 @@
       flake = false;
     };
   };
+
   # @function => attrset
   # the return value represent the build result
   outputs =
@@ -118,46 +119,47 @@
 
           };
 
-        homeConfigurations.dhsyan = home-manager.lib.homeManagerConfiguration {
+          homeConfigurations.dhsyan = home-manager.lib.homeManagerConfiguration {
             pkgs = self.darwinConfigurations."Ding-Hans-MacBook-Pro".pkgs;
             modules = [ ./home ];
-        };
+          };
 
-        darwinConfigurations."Ding-Hans-MacBook-Pro" = nix-darwin.lib.darwinSystem {
+          darwinConfigurations."Ding-Hans-MacBook-Pro" = nix-darwin.lib.darwinSystem {
             system = "aarch64_darwin";
-            specialArgs =  { inherit inputs; };
-            modules = [ 
-                ./hosts/maccas
-                nix-homebrew.darwinModules.nix-homebrew {
-                    nix-homebrew = {
-                        # Install Homebrew under the default prefix
-                        enable = true;
+            specialArgs = { inherit inputs; };
+            modules = [
+              ./hosts/maccas
+              nix-homebrew.darwinModules.nix-homebrew
+              {
+                nix-homebrew = {
+                  # Install Homebrew under the default prefix
+                  enable = true;
 
-                        # Apple Silicon Only: Also install Homebrew under the 
-                        # default Intel prefix for Rosetta 2
-                        enableRosetta = true;
+                  # Apple Silicon Only: Also install Homebrew under the
+                  # default Intel prefix for Rosetta 2
+                  enableRosetta = true;
 
-                        # User owning the Homebrew prefix
-                        user = "dhsyan";
+                  # User owning the Homebrew prefix
+                  user = "dhsyan";
 
-                        # Optional: Declarative tap management
-                        taps = {
-                            "homebrew/homebrew-core" = homebrew-core;
-                            "homebrew/homebrew-cask" = homebrew-cask;
-                            "homebrew/homebrew-bundle" = inputs.homebrew-bundle; 
-                            "nikitabobko/homebrew-tap" = inputs.nikitabobko-homebrew-tap;
-                            # "koekeishiya/homebrew-formulae" = inputs.yabai-homebrew-tap;
-                        };
+                  # Optional: Declarative tap management
+                  taps = {
+                    "homebrew/homebrew-core" = homebrew-core;
+                    "homebrew/homebrew-cask" = homebrew-cask;
+                    "homebrew/homebrew-bundle" = inputs.homebrew-bundle;
+                    "nikitabobko/homebrew-tap" = inputs.nikitabobko-homebrew-tap;
+                    # "koekeishiya/homebrew-formulae" = inputs.yabai-homebrew-tap;
+                  };
 
-                        # Optional: Enable fully-declarative tap management
-                        #
-                        # With mutableTaps disabled, taps can no longer be 
-                        # added imperatively with `brew tap`.
-                        mutableTaps = false;
-                    };
-                }
+                  # Optional: Enable fully-declarative tap management
+                  #
+                  # With mutableTaps disabled, taps can no longer be
+                  # added imperatively with `brew tap`.
+                  mutableTaps = false;
+                };
+              }
             ];
-        };
+          };
         };
 
       set2 = flake-utils.lib.eachDefaultSystem (
@@ -190,5 +192,4 @@
       return = set1 // set2;
     in
     return;
-
 }
