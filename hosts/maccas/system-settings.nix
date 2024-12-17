@@ -14,6 +14,7 @@
         spaces.spans-displays = true;
     };
     system.defaults.NSGlobalDomain._HIHideMenuBar = false;
+    system.defaults.hitoolbox.AppleFnUsageType = "Show Emoji & Symbols";
 
     environment.loginShellInit = "wallpaper set ~/.dotfiles/wallpaper/cs/cs.png";
 
