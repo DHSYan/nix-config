@@ -148,7 +148,13 @@
             whatsapp-for-linux
             ticktick
             markdownlint-cli
+            kanata
+            gh #github cli
 
+            inputs.zen-browser.packages."${system}".default
+            vmware-workstation
+            open-vm-tools
+            gimp
    ];
 
 }
