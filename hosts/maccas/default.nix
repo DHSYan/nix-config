@@ -27,8 +27,6 @@
             ripgrep
             tldr
             unzip
-            skhd
-            yabai
             racket
             neofetch
             discord
