@@ -37,5 +37,6 @@
         };
 
         ".config/waybar".source = ~/.dotfiles/waybar;
+        ".config/aerospace/aerospace.toml".source = ~/.dotfiles/aerospace/aerospace.toml;
     };
 }
