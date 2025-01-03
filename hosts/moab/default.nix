@@ -41,6 +41,9 @@
               pskRaw = "ext:taiwan_psk";
           };
           "Starbucks WiFi" = {};
+          "Hommy" = {
+              pskRaw = "ext:perry_psk";
+          };
       };
   };
 
