@@ -25,6 +25,9 @@
     neovim-nightly = {
       url = "github:nix-community/neovim-nightly-overlay/master";
     };
+    ghostty = {
+      url = "github:ghostty-org/ghostty";
+    };
     hyprland-nightly = {
       url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     };

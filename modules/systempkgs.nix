@@ -14,6 +14,7 @@
             "electron-25.9.0"
             "adobe-reader-9.5.5"
     ];
+    nixpkgs.config.allowBroken = true;
 
     environment.systemPackages = with pkgs; [
             dmenu
@@ -23,6 +24,7 @@
             gcc
             clang
             inputs.neovim-nightly.packages.${pkgs.system}.default
+            inputs.ghostty.packages.${pkgs.system}.default
             ripgrep
             tldr
             tmux
@@ -92,7 +94,7 @@
             delta
             eza
             thefuck
-            teams-for-linux
+            # teams-for-linux
             R
             rstudio
             p3x-onenote
