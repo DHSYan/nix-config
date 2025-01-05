@@ -12,6 +12,7 @@
     # List packages installed in system profile. To search by name, run:
     # $ nix-env -qaP | grep wget
     nixpkgs.config.allowUnfree = true;
+    nixpkgs.config.allowBroken = true;
     environment.systemPackages =
         with pkgs; [ 
             vim
@@ -27,7 +28,7 @@
             ripgrep
             tldr
             unzip
-            racket
+            # racket
             neofetch
             discord
             # lua
@@ -45,7 +46,7 @@
             delta
             eza
             thefuck
-            teams
+            # teams
             R
             #protonmail-desktop
             mdcat
@@ -58,6 +59,7 @@
             alacritty
             karabiner-elements
             tmux
+# ghostty
         ];
 
 
