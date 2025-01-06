@@ -157,6 +157,7 @@
             vmware-workstation
             open-vm-tools
             gimp
+            jdk
    ];
 
 }
