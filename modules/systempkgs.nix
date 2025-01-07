@@ -158,6 +158,7 @@
             open-vm-tools
             gimp
             jdk
+            umlet
    ];
 
 }
