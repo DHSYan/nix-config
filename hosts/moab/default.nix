@@ -44,6 +44,12 @@
           "Hommy" = {
               pskRaw = "ext:perry_psk";
           };
+          "ubcsecure" = {
+              auth = ''
+                  identity="dhsyan@ubc.ca"
+                  password=ext:eduroam_psk
+              '';
+          };
       };
   };
 
