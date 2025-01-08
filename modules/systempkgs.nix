@@ -159,6 +159,7 @@
             gimp
             jdk
             umlet
+            logisim-evolution
    ];
 
 }
