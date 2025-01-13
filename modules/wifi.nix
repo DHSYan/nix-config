@@ -28,6 +28,8 @@
           };
           "ubcsecure" = {
               auth = ''
+                  key_mgmt=WPA-EAP
+                  eap=PEAP
                   identity="dhsyan@ubc.ca"
                   password=ext:eduroam_psk
               '';
