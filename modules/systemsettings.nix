@@ -39,7 +39,7 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
-  hardware.opentabletdriver.enable = true;
+  #hardware.opentabletdriver.enable = true;
   boot.initrd.unl0kr.allowVendorDrivers = true;
   services.xserver.wacom.enable = true;
   
