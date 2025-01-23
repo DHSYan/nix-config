@@ -160,6 +160,7 @@
             jdk
             umlet
             logisim-evolution
+            image-roll
    ];
 
 }

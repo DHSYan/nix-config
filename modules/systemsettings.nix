@@ -43,5 +43,6 @@
   boot.initrd.unl0kr.allowVendorDrivers = true;
   services.xserver.wacom.enable = true;
   
+  services.tumbler.enable = true;
 
 }
