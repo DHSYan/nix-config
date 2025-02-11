@@ -39,7 +39,7 @@
             zsh
             fzf
             sxhkd
-            texliveMedium
+            # texliveMedium # broken as of 2025-01-23
             racket
             neofetch
             libfido2
@@ -95,8 +95,8 @@
             eza
             thefuck
             # teams-for-linux
-            R
-            rstudio
+            #R
+            #rstudio
             p3x-onenote
             protonmail-desktop
             mdcat
@@ -161,6 +161,8 @@
             umlet
             logisim-evolution
             image-roll
+            vlc
+            samba
    ];
 
 }
