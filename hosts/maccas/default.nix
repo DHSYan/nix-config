@@ -64,7 +64,7 @@
 
 
     # Auto upgrade nix package and the daemon service.
-    services.nix-daemon.enable = true;
+    # services.nix-daemon.enable = true; # was told to remove this 
 
     nix.settings.experimental-features = "nix-command flakes";
 
