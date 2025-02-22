@@ -57,7 +57,7 @@
             #whatsapp-for-mac
             nodejs_22
             alacritty
-            karabiner-elements
+            # karabiner-elements
             tmux
 # ghostty
         ];
