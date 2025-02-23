@@ -38,6 +38,7 @@
             "brave-browser"
             "ticktick"
             "nordvpn"
+            "beeper"
         ];
     };
 }
