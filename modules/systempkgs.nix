@@ -163,6 +163,7 @@
             image-roll
             vlc
             samba
+            beeper
    ];
 
 }
