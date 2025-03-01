@@ -59,6 +59,7 @@
             alacritty
             # karabiner-elements
             tmux
+            jdk
 # ghostty
         ];
 
