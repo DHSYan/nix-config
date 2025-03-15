@@ -49,10 +49,10 @@
          	CPU_MAX_PERF_ON_BAT = 30;
 
          	START_CHARGE_THRESH_BAT0 = 60;
-         	STOP_CHARGE_THRESH_BAT0 = 75;
+         	STOP_CHARGE_THRESH_BAT0 = 100;
 
             START_CHARGE_THRESH_BAT1 = 60;
-            STOP_CHARGE_THRESH_BAT1 = 75;
+            STOP_CHARGE_THRESH_BAT1 = 100;
 
 
          };
