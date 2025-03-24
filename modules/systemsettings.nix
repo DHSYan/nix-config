@@ -45,4 +45,7 @@
   
   services.tumbler.enable = true;
 
+  #theme 
+  qt.style = "adwaita-dark";
+
 }
