@@ -164,6 +164,7 @@
             vlc
             samba
             beeper
+            bibletime
    ];
 
 }
