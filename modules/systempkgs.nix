@@ -165,6 +165,7 @@
             samba
             beeper
             bibletime
+            nix-index
    ];
 
 }
