@@ -14,8 +14,6 @@
             "feh"
             "wallpaper"
             "ffmpeg"
-            #"yabai"
-            #"skhd"
         ];
         casks = [
             "google-chrome"
@@ -30,6 +28,7 @@
             "font-iosevka-nerd-font"
             "font-3270-nerd-font"
             "font-zed-mono-nerd-font"
+            "font-jetbrains-mono-nerd-font"
             "aldente"
             "rstudio"
             "R"
