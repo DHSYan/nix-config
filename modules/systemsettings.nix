@@ -48,4 +48,11 @@
   #theme 
   qt.style = "adwaita-dark";
 
+  # Localsend
+
+    programs.localsend = {
+      enable  = true;
+      openFirewall = true;
+    };
+
 }
