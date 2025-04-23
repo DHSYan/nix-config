@@ -12,6 +12,7 @@
         ../../modules/sysenvvars.nix
         ../../modules/keyboard.nix
         ../../modules/wifi.nix
+        ../../modules/inputmethod.nix
         ./hardware-configuration.nix
     ];
 

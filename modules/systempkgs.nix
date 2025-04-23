@@ -154,7 +154,7 @@
             gh #github cli
 
             inputs.zen-browser.packages."${system}".default
-            vmware-workstation
+            # vmware-workstation
             open-vm-tools
             gimp
             jdk

@@ -5,4 +5,5 @@
     services.xserver.xkb.variant = "dvorak";
     services.xserver.xkb.options = "caps:escape";
 
+# xkbOptions = "grp:win_space_toggle";
 }
