@@ -6,6 +6,7 @@
         nerd-fonts.jetbrains-mono
         nerd-fonts.terminess-ttf
         nerd-fonts._3270
+        nerd-fonts.zed-mono
         font-awesome
     ];
 }
