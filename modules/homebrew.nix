@@ -39,6 +39,7 @@
             "ticktick"
             "nordvpn"
             "beeper"
+            "wezterm"
         ];
     };
 }
