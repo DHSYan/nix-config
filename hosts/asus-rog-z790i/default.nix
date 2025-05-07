@@ -20,6 +20,7 @@
 
     networking.hostName = "nixos"; 
     services.xserver.videoDrivers = [ "nvidia" ];
+    hardware.nvidia.open = true;
 
     environment.systemPackages = with pkgs; [
         egl-wayland
@@ -28,6 +29,6 @@
     ];
     
 
-    system.stateVersion = "23.11"; 
+    system.stateVersion = "24.11"; 
 }
 
