@@ -14,6 +14,7 @@
             "feh"
             "wallpaper"
             "ffmpeg"
+            "typst"
         ];
         casks = [
             "google-chrome"
