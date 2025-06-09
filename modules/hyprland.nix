@@ -1,8 +1,8 @@
 { inputs, pkgs, ... }: 
 {
     security.polkit.enable = true;
-    services.xserver = {
-        enable = true;
+    services = {
+        # enable = true;
         displayManager = {
             gdm = {
                 enable = true;

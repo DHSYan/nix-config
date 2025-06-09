@@ -12,7 +12,7 @@
 
     nixpkgs.config.permittedInsecurePackages = [
             "electron-25.9.0"
-            "adobe-reader-9.5.5"
+            # "adobe-reader-9.5.5"
     ];
     nixpkgs.config.allowBroken = true;
 
@@ -93,7 +93,7 @@
             bat
             delta
             eza
-            thefuck
+#            thefuck
             # teams-for-linux
             #R
             #rstudio
@@ -103,7 +103,7 @@
             mdhtml
             telegram-desktop
             icloudpd
-            adobe-reader
+            # adobe-reader
             virtualbox
             qemu
             virt-manager
