@@ -15,6 +15,8 @@
             "wallpaper"
             "ffmpeg"
             "typst"
+            # "texlive"
+            "docker"
         ];
         casks = [
             "google-chrome"
