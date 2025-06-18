@@ -166,6 +166,8 @@
             beeper
             bibletime
             nix-index
+            docker
+            docker-compose
    ];
 
 }
