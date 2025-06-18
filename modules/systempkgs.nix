@@ -168,6 +168,7 @@
             nix-index
             docker
             docker-compose
+            postman
    ];
 
 }
