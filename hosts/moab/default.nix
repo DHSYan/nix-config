@@ -13,6 +13,7 @@
         ../../modules/keyboard.nix
         ../../modules/wifi.nix
         ../../modules/inputmethod.nix
+        ../../modules/docker.nix
         ./hardware-configuration.nix
     ];
 
