@@ -9,6 +9,8 @@
         ./clock.nix
     ];
 
+    system.primaryUser = "dhsyan";
+
     # List packages installed in system profile. To search by name, run:
     # $ nix-env -qaP | grep wget
     nixpkgs.config.allowUnfree = true;
@@ -45,7 +47,7 @@
             bat
             delta
             eza
-            thefuck
+            # thefuck
             # teams
             R
             #protonmail-desktop

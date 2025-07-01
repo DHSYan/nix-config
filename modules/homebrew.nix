@@ -16,7 +16,8 @@
             "ffmpeg"
             "typst"
             # "texlive"
-            "docker"
+            # "docker"
+            "docker-compose"
         ];
         casks = [
             "google-chrome"
@@ -43,6 +44,7 @@
             "nordvpn"
             "beeper"
             "wezterm"
+            "docker"
         ];
     };
 }
