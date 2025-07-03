@@ -169,6 +169,7 @@
             docker
             docker-compose
             postman
+            lsb-release
    ];
 
 }
