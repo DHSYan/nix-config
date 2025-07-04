@@ -20,6 +20,7 @@
             "docker-compose"
         ];
         casks = [
+            "alacritty"
             "google-chrome"
             "raycast"
             # "kitty"

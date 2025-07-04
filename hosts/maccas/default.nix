@@ -58,7 +58,7 @@
             libfido2
             #whatsapp-for-mac
             nodejs_22
-            alacritty
+            # alacritty
             # karabiner-elements
             tmux
             jdk
