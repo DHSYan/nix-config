@@ -170,6 +170,7 @@
             docker-compose
             postman
             lsb-release
+            postgresql
    ];
 
 }

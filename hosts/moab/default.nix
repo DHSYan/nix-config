@@ -14,6 +14,7 @@
         ../../modules/wifi.nix
         ../../modules/inputmethod.nix
         ../../modules/docker.nix
+        ../../modules/postgresql.nix
         ./hardware-configuration.nix
     ];
 
