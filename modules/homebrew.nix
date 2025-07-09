@@ -18,6 +18,7 @@
             # "texlive"
             # "docker"
             "docker-compose"
+            "postgresql"
         ];
         casks = [
             "alacritty"
@@ -46,6 +47,7 @@
             "beeper"
             "wezterm"
             "docker"
+            "postman"
         ];
     };
 }
