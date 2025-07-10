@@ -81,6 +81,7 @@
             python3
             # python312Packages.pip
             python312Packages.pandas
+            python313Packages.python-lsp-server
             # xorg.xmodmap
             xss-lock
             slock
