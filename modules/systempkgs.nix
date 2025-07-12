@@ -1,4 +1,4 @@
-{ pkgs, inputs, ...} : 
+{  pkgs, inputs, ...} : 
 {
     nixpkgs.config.allowUnfree = true;
 
@@ -29,6 +29,7 @@
             tldr
             tmux
             unzip
+            zip
             wget
             git
             xclip
@@ -79,9 +80,9 @@
             albert
             gnupg
             python3
-            # python312Packages.pip
             python312Packages.pandas
             python313Packages.python-lsp-server
+            python313Packages.pip
             # xorg.xmodmap
             xss-lock
             slock
@@ -171,7 +172,7 @@
             docker-compose
             postman
             lsb-release
-            postgresql
+            localstack
    ];
 
 }
