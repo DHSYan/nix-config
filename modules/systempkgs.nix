@@ -173,6 +173,8 @@
             postman
             lsb-release
             localstack
+            aws-sam-cli
+            awscli
    ];
 
 }
