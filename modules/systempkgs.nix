@@ -175,6 +175,7 @@
             localstack
             aws-sam-cli
             awscli
+            obs-studio
    ];
 
 }
