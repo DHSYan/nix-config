@@ -19,6 +19,7 @@
             # "docker"
             "docker-compose"
             "postgresql"
+            "gpg"
         ];
         casks = [
             "alacritty"
