@@ -14,7 +14,7 @@
 
         ".ssh/config".source = ~/.dotfiles/ssh/config;
 
-        ".config/nvim".source = ~/.dotfiles/nvim; 
+        ".config/nvim".source = ~/.dotfiles/nvim.config; 
 
         ".xinitrc".source = ~/.dotfiles/x11/.xinitrc;
 
