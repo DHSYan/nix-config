@@ -79,6 +79,8 @@
             # xorg.xhost
             albert
             gnupg
+            pyenv
+            # python3.9
             python3
             python312Packages.pandas
             python313Packages.python-lsp-server
@@ -176,6 +178,8 @@
             aws-sam-cli
             awscli
             obs-studio
+            yarn
+            gemini-cli
    ];
 
 }
