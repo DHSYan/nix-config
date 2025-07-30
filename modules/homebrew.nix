@@ -20,6 +20,8 @@
             "docker-compose"
             "postgresql"
             "gpg"
+            "aws-sam-cli"
+            "yarn"
         ];
         casks = [
             "alacritty"
