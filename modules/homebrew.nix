@@ -52,6 +52,7 @@
             "docker"
             "postman"
             "vlc"
+            "virtualbox"
         ];
     };
 }
