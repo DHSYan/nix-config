@@ -19,7 +19,7 @@
         with pkgs; [ 
             vim
             spotify
-            neovim
+            inputs.neovim-nightly.packages.${pkgs.system}.default
             fzf
             wget
             git
