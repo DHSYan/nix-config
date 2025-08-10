@@ -22,6 +22,7 @@
             "gpg"
             "aws-sam-cli"
             "yarn"
+	    "stow"
         ];
         casks = [
             "alacritty"
