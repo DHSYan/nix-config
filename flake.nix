@@ -13,10 +13,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # home-manager = {
+    #   url = "github:nix-community/home-manager";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     nixos-hardware = {
       url = "github:NixOS/nixos-hardware/master";
@@ -25,14 +25,17 @@
     neovim-nightly = {
       url = "github:nix-community/neovim-nightly-overlay/master";
     };
-    ghostty = {
-      url = "github:ghostty-org/ghostty";
-    };
+    # ghostty = {
+    #  url = "github:ghostty-org/ghostty";
+    # };
     hyprland-nightly = {
       url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     };
 
-    zen-browser.url = "github:MarceColl/zen-browser-flake";
+    zen-browser = {
+        url = "github:0xc000022070/zen-browser-flake";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
 
@@ -62,7 +65,7 @@
     {
       self,
       nixpkgs,
-      home-manager,
+      # home-manager,
       nixos-hardware,
       flake-utils,
       nix-darwin,
@@ -115,17 +118,17 @@
             };
           };
 
-          homeConfigurations.tzen = home-manager.lib.homeManagerConfiguration {
-            inherit pkgs;
+          # homeConfigurations.tzen = home-manager.lib.homeManagerConfiguration {
+          #   inherit pkgs;
 
-            modules = [ ./home ];
+          #   modules = [ ./home ];
 
-          };
+          # };
 
-          homeConfigurations.dhsyan = home-manager.lib.homeManagerConfiguration {
-            pkgs = self.darwinConfigurations."Ding-Hans-MacBook-Pro".pkgs;
-            modules = [ ./temp ];
-          };
+          # homeConfigurations.dhsyan = home-manager.lib.homeManagerConfiguration {
+          #   pkgs = self.darwinConfigurations."Ding-Hans-MacBook-Pro".pkgs;
+          #   modules = [ ./temp ];
+          # };
 
           darwinConfigurations."Ding-Hans-MacBook-Pro" = nix-darwin.lib.darwinSystem {
             system = "aarch64_darwin";

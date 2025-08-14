@@ -17,6 +17,7 @@
     nixpkgs.config.allowBroken = true;
 
     environment.systemPackages = with pkgs; [
+	    stow
             dmenu
             wezterm
             google-chrome
@@ -24,7 +25,7 @@
             gcc
             clang
             inputs.neovim-nightly.packages.${pkgs.system}.default
-            inputs.ghostty.packages.${pkgs.system}.default
+            # inputs.ghostty.packages.${pkgs.system}.default
             ripgrep
             tldr
             tmux
@@ -32,7 +33,7 @@
             zip
             wget
             git
-            xclip
+            # xclip
             # xorg.xdpyinfo
             # xorg.xinput
             # xorg.xev
@@ -41,7 +42,7 @@
             fzf
             sxhkd
             # texliveMedium # broken as of 2025-01-23
-            racket
+            # racket
             neofetch
             libfido2
             sshfs-fuse
@@ -52,23 +53,21 @@
             luajit
             gnumake
             cmake
-            unzip
             gnutar
             curl
             wget
             obsidian # need to enable some electron package
             localsend
             xournalpp
-            thunderbird
-            flameshot
+            # thunderbird
+            # flameshot
             tlp
-            home-manager
+            # home-manager
             # xorg.libX11
             # xorg.libxkbfile
             spotifyd
             tree-sitter
             zathura
-            localsend
             bitwarden
             slstatus
             xfce.thunar
@@ -76,18 +75,11 @@
             lorien
             blueman
             copyq
-            # xorg.xhost
             albert
             gnupg
             pyenv
-            # python3.9
-            python3
-            python312Packages.pandas
-            python313Packages.python-lsp-server
-            python313Packages.pip
-            # xorg.xmodmap
-            xss-lock
-            slock
+            # xss-lock
+            # slock
             lightdm
             vscode # Don't tell anyone please, but sometimes I have no choice
             vial
@@ -97,20 +89,14 @@
             bat
             delta
             eza
-#            thefuck
-            # teams-for-linux
-            #R
-            #rstudio
-            p3x-onenote
-            protonmail-desktop
             mdcat
             mdhtml
             telegram-desktop
             icloudpd
             # adobe-reader
-            virtualbox
-            qemu
-            virt-manager
+            # virtualbox
+            # qemu
+            # virt-manager
             spice 
             spice-gtk
             spice-protocol
@@ -118,7 +104,6 @@
             win-spice
             pdftk
             pdfarranger
-            nodejs_22
             hyprland
             waybar
             swaynotificationcenter
@@ -128,7 +113,6 @@
                 }))
             dunst
             libnotify
-            # swww #wallpaper deamen
             kitty
             hyprpaper
             alacritty
@@ -141,20 +125,19 @@
             zed-editor
             brightnessctl
             zoom-us
-            anki
+            # anki
             slurp
             grim
             swappy
-            kmonad
+            # kmonad
             pavucontrol
             hyprlock
             hyprshot
             playerctl
             nh
             whatsapp-for-linux
-            ticktick
             markdownlint-cli
-            kanata
+            # kanata
             gh #github cli
 
             inputs.zen-browser.packages."${system}".default
