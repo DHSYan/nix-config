@@ -1,6 +1,6 @@
 { ... }:
 {
-  time.timeZone = "America/Vancouver";
+  # time.timeZone = "America/Vancouver";
   services.automatic-timezoned.enable = true;
 
   console.useXkbConfig = true;

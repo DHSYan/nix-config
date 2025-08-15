@@ -15,9 +15,11 @@
   # };
 
   i18n.inputMethod = {
-    enabled = "fcitx5";
-    waylandFrontend = true;
+    type = "fcitx5";
+    enable = true;
+    # waylandFrontend = true;
     fcitx5.addons = with pkgs; [
+      fcitx5-mozc
       rime-data
       fcitx5-gtk
       fcitx5-rime
