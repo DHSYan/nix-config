@@ -76,9 +76,9 @@
     lorien
     blueman
     copyq
-    albert
+    # albert
     gnupg
-    pyenv
+    # pyenv
     # xss-lock
     # slock
     lightdm
@@ -93,7 +93,7 @@
     mdcat
     mdhtml
     telegram-desktop
-    icloudpd
+    # icloudpd
     # adobe-reader
     # virtualbox
     # qemu
@@ -114,7 +114,7 @@
     }))
     dunst
     libnotify
-    kitty
+    # kitty
     hyprpaper
     alacritty
     rofi-wayland

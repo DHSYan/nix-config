@@ -1,48 +1,47 @@
-{ inputs, pkgs, ... }: 
+{ inputs, pkgs, ... }:
 {
-    security.polkit.enable = true;
-    services = {
-        # enable = true;
-        displayManager = {
-            gdm = {
-                enable = true;
-                wayland = true;
-            };
-        };
-    };
-    services.displayManager.defaultSession = "hyprland";
-
-    programs.hyprland = {
+  security.polkit.enable = true;
+  services = {
+    # enable = true;
+    displayManager = {
+      gdm = {
         enable = true;
-        # nvidiaPatches = true;
-        xwayland.enable = true;
-        portalPackage = pkgs.xdg-desktop-portal-hyprland;
-        systemd.setPath.enable = true;
-        package = inputs.hyprland-nightly.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+        wayland = true;
+      };
     };
+  };
+  services.displayManager.defaultSession = "hyprland";
 
-    xdg.portal = {
-        enable = true;
-        extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-    };
+  programs.hyprland = {
+    enable = true;
+    # nvidiaPatches = true;
+    xwayland.enable = true;
+    portalPackage = pkgs.xdg-desktop-portal-hyprland;
+    systemd.setPath.enable = true;
+    package = inputs.hyprland-nightly.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+  };
 
-    services.hypridle = {
-        enable = true;
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
 
-    };
-    programs.hyprlock = {
-        enable = true;
+  services.hypridle = {
+    enable = true;
 
-    };
+  };
+  programs.hyprlock = {
+    enable = true;
+  };
 
-    # environment.sessionVariables = {
-    #     # NIXOS_OZONE_WL = "1";
-    # };
+  # environment.sessionVariables = {
+  #     # NIXOS_OZONE_WL = "1";
+  # };
 
-    hardware = {
-        # opengl.enable = true;
-        graphics.enable = true;
-        graphics.enable32Bit = true;
-        nvidia.modesetting.enable = true;
-    };
+  hardware = {
+    # opengl.enable = true;
+    graphics.enable = true;
+    graphics.enable32Bit = true;
+    nvidia.modesetting.enable = true;
+  };
 }

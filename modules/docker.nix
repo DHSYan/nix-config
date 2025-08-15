@@ -1,6 +1,6 @@
-{ ... }: 
+{ ... }:
 {
-    virtualisation.docker.enable = true;
-    # users.users.<myuser>.extraGroups = [ "docker" ];
-    users.extraGroups.docker.members = [ "username-with-access-to-socket" ];
+  virtualisation.docker.enable = true;
+  # users.users.<myuser>.extraGroups = [ "docker" ];
+  users.extraGroups.docker.members = [ "tzen" ];
 }
