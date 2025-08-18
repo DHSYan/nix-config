@@ -182,10 +182,6 @@
               ];
               name = "nix-dev-shell";
 
-              # inputsFrom = with pkgs; [
-              #   nixfmt-rfc-style
-              # ];
-
               shellHook = ''
                 zsh
               '';
