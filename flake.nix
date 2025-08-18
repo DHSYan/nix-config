@@ -125,9 +125,21 @@
 
             dayone = nixpkgs.lib.nixosSystem {
               inherit system;
+              specialArgs = {
+                inherit inputs;
+                inherit system;
+              };
               modules = [
                 disko.nixosModules.disko
                 ./hosts/dayone
+              ];
+            };
+
+            factorysecond = nixpkgs.lib.nixosSystem {
+              inherit system;
+              modules = [
+                disko.nixosModules.disko
+                ./hosts/factorysecond
               ];
             };
           };
@@ -192,6 +204,7 @@
             default = pkgs.mkShell {
               packages = with pkgs; [
                 nixfmt-rfc-style
+                nixos-anywhere
                 nixd
               ];
               name = "nix-dev-shell";

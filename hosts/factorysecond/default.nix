@@ -10,8 +10,6 @@
     (modulesPath + "/profiles/qemu-guest.nix")
     ./disk-config.nix
     ./hardware-configuration.nix
-    ../../modules/user.nix
-    ../../modules/systempkgs-server.nix
   ];
   boot.loader.grub = {
     # no need to set devices, disko will add all devices that have a EF02 partition to the list already
@@ -21,12 +19,10 @@
   };
   services.openssh.enable = true;
 
-  # environment.systemPackages =
-  #   with pkgs;
-  #   map lib.lowPrio [
-  #     curl
-  #     git
-  #   ];
+  environment.systemPackages = map lib.lowPrio [
+    pkgs.curl
+    pkgs.gitMinimal
+  ];
 
   users.users.root.openssh.authorizedKeys.keys = [
     # change this to your ssh key

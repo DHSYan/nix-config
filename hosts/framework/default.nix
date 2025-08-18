@@ -8,7 +8,7 @@
         ../../modules/hyprland.nix
         ../../modules/user.nix
         ../../modules/fonts.nix
-        ../../modules/yubikey.nix
+       # ../../modules/yubikey.nix
         ../../modules/systemsettings.nix
         ../../modules/sysenvvars.nix
         ../../modules/keyboard.nix
@@ -17,7 +17,7 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
+  services.openssh.settings.PermitRootLogin = "yes";
   networking.hostName = "nixos"; 
   networking.wireless =  {
       enable = true;  # Enables wireless support via wpa_supplicant.
