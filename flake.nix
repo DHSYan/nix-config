@@ -57,6 +57,11 @@
       url = "github:nikitabobko/homebrew-tap";
       flake = false;
     };
+
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   # @function => attrset
@@ -72,6 +77,7 @@
       homebrew-core,
       homebrew-cask,
       nix-homebrew,
+      disko,
       ...
     }@inputs:
     let
@@ -114,6 +120,14 @@
               modules = [
                 ./hosts/moab
                 nixos-hardware.nixosModules.framework-13-7040-amd
+              ];
+            };
+
+            dayone = nixpkgs.lib.nixosSystem {
+              inherit system;
+              modules = [
+                disko.nixosModules.disko
+                ./hosts/dayone
               ];
             };
           };
