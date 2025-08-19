@@ -137,6 +137,10 @@
 
             factorysecond = nixpkgs.lib.nixosSystem {
               inherit system;
+              specialArgs = {
+                inherit inputs;
+                inherit system;
+              };
               modules = [
                 disko.nixosModules.disko
                 ./hosts/factorysecond
@@ -202,6 +206,7 @@
         {
           devShells = {
             default = pkgs.mkShell {
+              NIX_SSHOPTS = "-i ~/.ssh/yubikey";
               packages = with pkgs; [
                 nixfmt-rfc-style
                 nixos-anywhere
