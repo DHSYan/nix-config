@@ -17,6 +17,7 @@
   nixpkgs.config.allowBroken = true;
 
   environment.systemPackages = with pkgs; [
+  wakeonlan
       whatsie
     typst
     stow
