@@ -146,6 +146,17 @@
                 ./hosts/factorysecond
               ];
             };
+            pivpn = nixpkgs.lib.nixosSystem {
+              system = "aarch64-linux";
+              specialArgs = {
+                inherit inputs;
+                system = "aarch64-linux"
+              };
+              modules = [
+                disko.nixosModules.disko
+                ./hosts/pi-vpn
+              ];
+            };
           };
 
           # homeConfigurations.tzen = home-manager.lib.homeManagerConfiguration {
