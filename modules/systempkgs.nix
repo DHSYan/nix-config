@@ -17,6 +17,7 @@
   nixpkgs.config.allowBroken = true;
 
   environment.systemPackages = with pkgs; [
+wireguard-tools
   wakeonlan
       whatsie
     typst

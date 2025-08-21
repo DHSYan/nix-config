@@ -150,7 +150,7 @@
               system = "aarch64-linux";
               specialArgs = {
                 inherit inputs;
-                system = "aarch64-linux"
+                system = "aarch64-linux";
               };
               modules = [
                 disko.nixosModules.disko
