@@ -12,9 +12,11 @@
     ./hardware-configuration.nix
     ../../modules/user.nix
     ../../modules/immich.nix
+    ../../modules/dashy.nix
     ../../modules/inputmethod.nix
     ../../modules/nixsettings.nix
     ../../modules/systempkgs-server.nix
+    # ../../modules/docker.nix
   ];
   boot.loader.grub = {
     # no need to set devices, disko will add all devices that have a EF02 partition to the list already
@@ -24,7 +26,32 @@
   };
   services.openssh.enable = true;
 
+  environment.systemPackages = with pkgs; [
+    dashy-ui
+    immich-cli
+    immich
+  ];
+
   networking.interfaces.eth0.wakeOnLan.enable = true;
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [
+      80
+      443
+      8080
+      2283
+    ];
+    allowedUDPPortRanges = [
+      {
+        from = 4000;
+        to = 4007;
+      }
+      {
+        from = 8000;
+        to = 8010;
+      }
+    ];
+  };
 
   users.users.root.openssh.authorizedKeys.keys = [
     # change this to your ssh key
