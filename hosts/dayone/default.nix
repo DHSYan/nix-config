@@ -11,6 +11,9 @@
     ./disk-config.nix
     ./hardware-configuration.nix
     ../../modules/user.nix
+    ../../modules/immich.nix
+    ../../modules/inputmethod.nix
+    ../../modules/nixsettings.nix
     ../../modules/systempkgs-server.nix
   ];
   boot.loader.grub = {
@@ -21,13 +24,8 @@
   };
   services.openssh.enable = true;
 
-  # environment.systemPackages =
-  #   with pkgs;
-  #   map lib.lowPrio [
-  #     curl
-  #     git
-  #   ];
   networking.interfaces.eth0.wakeOnLan.enable = true;
+
   users.users.root.openssh.authorizedKeys.keys = [
     # change this to your ssh key
     "sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIMoVAIrI4nMtW06w18N7W8V86PQnD/16xgTY2KOT/a5rAAAADHNzaDp5dWJpa2V5NQ== ssh:yubikey5"
