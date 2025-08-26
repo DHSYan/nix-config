@@ -12,11 +12,11 @@
     ./hardware-configuration.nix
     ../../modules/user.nix
     ../../modules/immich.nix
-    ../../modules/dashy.nix
+    # ../../modules/dashy.nix
     ../../modules/inputmethod.nix
     ../../modules/nixsettings.nix
     ../../modules/systempkgs-server.nix
-    # ../../modules/docker.nix
+    ../../modules/docker.nix
   ];
   boot.loader.grub = {
     # no need to set devices, disko will add all devices that have a EF02 partition to the list already
