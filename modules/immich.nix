@@ -23,6 +23,16 @@
     mediaLocation = "/mnt/immich";
     openFirewall = true;
     # package = pkgs.immich;
+    accelerationDevices = null;
   };
+
+  hardware.graphics = {
+    enable = true;
+  };
+
+  users.users.immich.extraGroups = [
+    "video"
+    "render"
+  ];
 
 }
