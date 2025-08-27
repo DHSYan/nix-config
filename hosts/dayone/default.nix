@@ -12,7 +12,7 @@
     ./hardware-configuration.nix
     ../../modules/user.nix
     ../../modules/immich.nix
-    # ../../modules/dashy.nix
+    ../../modules/homepage.nix
     ../../modules/inputmethod.nix
     ../../modules/nixsettings.nix
     ../../modules/systempkgs-server.nix
@@ -40,6 +40,7 @@
       443
       8080
       2283
+      8082
     ];
     allowedUDPPortRanges = [
       {
@@ -48,7 +49,7 @@
       }
       {
         from = 8000;
-        to = 8010;
+        to = 8100;
       }
     ];
   };
