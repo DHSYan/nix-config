@@ -23,6 +23,24 @@
               href = "http://192.168.1.101:2283";
             };
           }
+          {
+            "router" = {
+              description = "My Router Setting";
+              href = "https://192.168.1.1";
+            };
+          }
+          {
+            "EPIC" = {
+              description = "My EPIC NAS My First ever homelab machine";
+              href = "https://192.168.1.102";
+            };
+          }
+          {
+            "Nextcloud" = {
+              description = "Mainly for file sharing";
+              href = "http://192.168.1.101";
+            };
+          }
         ];
       }
       {
