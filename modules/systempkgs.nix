@@ -17,9 +17,10 @@
   nixpkgs.config.allowBroken = true;
 
   environment.systemPackages = with pkgs; [
-wireguard-tools
-  wakeonlan
-      whatsie
+    nextcloud-client
+    wireguard-tools
+    wakeonlan
+    whatsie
     typst
     stow
     dmenu
