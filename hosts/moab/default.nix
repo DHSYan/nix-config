@@ -15,6 +15,7 @@
     ../../modules/inputmethod.nix
     ../../modules/docker.nix
     ../../modules/postgresql.nix
+    ../../modules/wireguard.nix
     ./hardware-configuration.nix
   ];
 
