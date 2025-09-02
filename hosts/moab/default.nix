@@ -17,6 +17,7 @@
     ../../modules/postgresql.nix
     ../../modules/wireguard.nix
     ../../modules/games.nix
+    ../../modules/firewall.nix
     ./hardware-configuration.nix
   ];
 

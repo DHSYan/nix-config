@@ -37,6 +37,9 @@
       "TracyIPhone15" = {
         pskRaw = "ext:momphone_psk";
       };
+      "NETGEAR06" = {
+          pskRaw = "ext:netgear06_psk";
+      };
     };
   };
 }
