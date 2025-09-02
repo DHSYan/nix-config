@@ -154,7 +154,7 @@
               };
               modules = [
                 disko.nixosModules.disko
-                ./hosts/pi-vpn
+                ./hosts/pivpn
               ];
             };
           };

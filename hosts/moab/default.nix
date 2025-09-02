@@ -16,6 +16,7 @@
     ../../modules/docker.nix
     ../../modules/postgresql.nix
     ../../modules/wireguard.nix
+    ../../modules/games.nix
     ./hardware-configuration.nix
   ];
 
