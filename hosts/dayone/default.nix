@@ -17,6 +17,7 @@
     ../../modules/nixsettings.nix
     ../../modules/systempkgs-server.nix
     ../../modules/docker.nix
+    ../../modules/firewall-server.nix
     ../../modules/nextcloud.nix
 
   ];
@@ -35,26 +36,6 @@
   ];
 
   networking.interfaces.eth0.wakeOnLan.enable = true;
-  networking.firewall = {
-    enable = true;
-    allowedTCPPorts = [
-      80
-      443
-      8080
-      2283
-      8082
-    ];
-    allowedUDPPortRanges = [
-      {
-        from = 4000;
-        to = 4007;
-      }
-      {
-        from = 8000;
-        to = 8100;
-      }
-    ];
-  };
 
   users.users.root.openssh.authorizedKeys.keys = [
     # change this to your ssh key
