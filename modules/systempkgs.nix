@@ -168,6 +168,8 @@
     obs-studio
     yarn
     gemini-cli
+    rstudio
+    R
   ];
 
 }
