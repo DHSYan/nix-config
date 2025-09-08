@@ -18,6 +18,7 @@
     ../../modules/wireguard.nix
     ../../modules/games.nix
     ../../modules/firewall.nix
+    ../../modules/lspserverpkgs.nix
     ./hardware-configuration.nix
   ];
 
