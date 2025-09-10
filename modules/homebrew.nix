@@ -55,6 +55,7 @@
       "postman"
       "vlc"
       "virtualbox"
+      "macfuse"
     ];
   };
 }
