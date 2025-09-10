@@ -170,6 +170,8 @@
     gemini-cli
     rstudio
     R
+    powertop
+    htop
   ];
 
 }
