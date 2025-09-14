@@ -24,6 +24,7 @@
       "yarn"
       "sshfs"
       "stow"
+      "tailscale"
     ];
     casks = [
       "alacritty"
@@ -42,7 +43,7 @@
       "font-jetbrains-mono-nerd-font"
       "aldente"
       "rstudio"
-      "R"
+      # "R"
       "onedrive"
       "zoom"
       "tg-pro"
@@ -51,7 +52,7 @@
       "nordvpn"
       "beeper"
       "wezterm"
-      "docker"
+      # "docker"
       "postman"
       "vlc"
       "virtualbox"
