@@ -18,7 +18,7 @@
     environment.systemPackages =
         with pkgs; [ 
             vim
-            spotify
+            # spotify
             inputs.neovim-nightly.packages.${pkgs.system}.default
             fzf
             wget
