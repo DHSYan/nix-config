@@ -22,7 +22,7 @@
       "gpg"
       "aws-sam-cli"
       "yarn"
-      "sshfs"
+      # "sshfs"
       "stow"
       "tailscale"
     ];
@@ -57,6 +57,8 @@
       "vlc"
       "virtualbox"
       "macfuse"
+      "whatsapp"
+      "spotify"
     ];
   };
 }
