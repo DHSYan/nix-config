@@ -59,6 +59,7 @@
       "macfuse"
       "whatsapp"
       "spotify"
+      "nextcloud"
     ];
   };
 }
