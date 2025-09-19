@@ -25,6 +25,7 @@
       # "sshfs"
       "stow"
       "tailscale"
+      "gdb"
     ];
     casks = [
       "alacritty"
