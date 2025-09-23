@@ -13,6 +13,7 @@
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0"
     # "adobe-reader-9.5.5"
+    "qtwebengine-5.15.19"
   ];
   nixpkgs.config.allowBroken = true;
 
@@ -122,7 +123,7 @@
     # kitty
     hyprpaper
     alacritty
-    rofi-wayland
+    rofi
     wofi
     networkmanagerapplet
     wpa_supplicant_gui
@@ -156,7 +157,6 @@
     image-roll
     vlc
     samba
-    beeper
     bibletime
     nix-index
     docker
@@ -173,6 +173,7 @@
     R
     powertop
     htop
+    zotero
   ];
 
 }
