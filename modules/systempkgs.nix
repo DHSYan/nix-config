@@ -18,6 +18,7 @@
   nixpkgs.config.allowBroken = true;
 
   environment.systemPackages = with pkgs; [
+  webex
     gromit-mpx
     nextcloud-client
     wireguard-tools
