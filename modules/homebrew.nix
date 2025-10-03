@@ -61,6 +61,7 @@
       "whatsapp"
       "spotify"
       "nextcloud"
+      "webex"
     ];
   };
 }
