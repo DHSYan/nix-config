@@ -175,6 +175,7 @@
     powertop
     htop
     zotero
+    google-cloud-sdk
   ];
 
 }
