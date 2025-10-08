@@ -26,6 +26,7 @@
       "stow"
       "tailscale"
       "gdb"
+      "python3"
     ];
     casks = [
       "alacritty"
@@ -62,6 +63,7 @@
       "spotify"
       "nextcloud"
       "webex"
+      "gcloud-cli"
     ];
   };
 }
