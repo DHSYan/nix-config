@@ -18,8 +18,13 @@
   nixpkgs.config.allowBroken = true;
 
   environment.systemPackages = with pkgs; [
-  webex
-    gromit-mpx
+    nodejs
+    nixd
+    typescript-language-server
+    tinymist
+    harper
+    webex
+    # gromit-mpx
     nextcloud-client
     wireguard-tools
     wakeonlan
