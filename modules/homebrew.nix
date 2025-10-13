@@ -64,6 +64,7 @@
       "nextcloud"
       "webex"
       "gcloud-cli"
+      "ngrok"
     ];
   };
 }
