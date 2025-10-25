@@ -4,9 +4,9 @@
   services = {
     # enable = true;
     displayManager = {
-      gdm = {
+      sddm = {
         enable = true;
-        wayland = true;
+        wayland.enable = true;
       };
     };
   };
