@@ -26,7 +26,7 @@
       "stow"
       "tailscale"
       "gdb"
-      "python3"
+      # "python3"
     ];
     casks = [
       "alacritty"
