@@ -5,14 +5,16 @@
   # Defines all the dependencies of this flake
   # These will get passed as arguments into the outputs function below
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05"; #nixos-25.05 vs nixpkgs-25.05, the nixos one gets extra os testing
+    nixpkgs-stable-darwin.url = "github:NixOS/nixpkgs/nixpkgs-25.05-darwin"; # A
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable"; # maybe should consider adding nixos-unstable and see if that works better...
     flake-utils.url = "github:numtide/flake-utils";
 
     nix-darwin = {
-      url = "github:LnL7/nix-darwin";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:LnL7/nix-darwin/nix-darwin-25.05"; # B (#A and #B have to match up, if you are using stable channel"
+      inputs.nixpkgs.follows = "nixpkgs-stable-darwin";
     };
+
 
     # home-manager = {
     #   url = "github:nix-community/home-manager";
