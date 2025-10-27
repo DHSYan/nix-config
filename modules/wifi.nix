@@ -16,7 +16,7 @@
           password=ext:eduroam_psk
         '';
       };
-      TwinklePhone = {
+      TwinklPhone = {
         pskRaw = "ext:twinklephone_psk";
       };
       "2F1" = {
