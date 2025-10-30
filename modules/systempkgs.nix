@@ -18,8 +18,9 @@
   nixpkgs.config.allowBroken = true;
 
   environment.systemPackages = with pkgs; [
-  devenv
-  # ngrok
+    libreoffice
+    devenv
+    # ngrok
     # nodejs
     nixd
     # typescript-language-server
