@@ -1,13 +1,13 @@
-{ pkgs, inputs, ... }:
-{
+{ pkgs, inputs, ... }: {
   nixpkgs.config.allowUnfree = true;
 
   # this allows us to run binaries?
   programs.nix-ld = {
     enable = true;
-    libraries = with pkgs; [
-      # exfat
-    ];
+    libraries = with pkgs;
+      [
+        # exfat
+      ];
   };
 
   nixpkgs.config.permittedInsecurePackages = [
@@ -23,6 +23,7 @@
     # ngrok
     # nodejs
     nixd
+    nixfmt
     # typescript-language-server
     # tinymist
     harper
@@ -132,9 +133,8 @@
     waybar
     swaynotificationcenter
     eww
-    (waybar.overrideAttrs (old: {
-      mesonFlags = old.mesonFlags ++ [ "-Dexperimental=true" ];
-    }))
+    (waybar.overrideAttrs
+      (old: { mesonFlags = old.mesonFlags ++ [ "-Dexperimental=true" ]; }))
     dunst
     libnotify
     # kitty
