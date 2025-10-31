@@ -5,25 +5,25 @@
   # Defines all the dependencies of this flake
   # These will get passed as arguments into the outputs function below
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05"; #nixos-25.05 vs nixpkgs-25.05, the nixos one gets extra os testing
+    nixpkgs.url =
+      "github:NixOS/nixpkgs/nixos-25.05"; # nixos-25.05 vs nixpkgs-25.05, the nixos one gets extra os testing
     nixpkgs-stable-darwin.url = "github:NixOS/nixpkgs/nixpkgs-25.05-darwin"; # A
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable"; # maybe should consider adding nixos-unstable and see if that works better...
+    nixpkgs-unstable.url =
+      "github:nixos/nixpkgs/nixpkgs-unstable"; # maybe should consider adding nixos-unstable and see if that works better...
     flake-utils.url = "github:numtide/flake-utils";
 
     nix-darwin = {
-      url = "github:LnL7/nix-darwin/nix-darwin-25.05"; # B (#A and #B have to match up, if you are using stable channel"
+      url =
+        "github:LnL7/nix-darwin/nix-darwin-25.05"; # B (#A and #B have to match up, if you are using stable channel"
       inputs.nixpkgs.follows = "nixpkgs-stable-darwin";
     };
-
 
     # home-manager = {
     #   url = "github:nix-community/home-manager";
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
 
-    nixos-hardware = {
-      url = "github:NixOS/nixos-hardware/master";
-    };
+    nixos-hardware = { url = "github:NixOS/nixos-hardware/master"; };
 
     neovim-nightly = {
       url = "github:nix-community/neovim-nightly-overlay/master";
@@ -69,112 +69,90 @@
 
   # @function => attrset
   # the return value represent the build result
-  outputs =
-    {
-      self,
-      nixpkgs,
-      # home-manager,
-      nixos-hardware,
-      flake-utils,
-      nix-darwin,
-      homebrew-core,
-      homebrew-cask,
-      nix-homebrew,
-      disko,
-      ...
-    }@inputs:
+  outputs = { self, nixpkgs,
+    # home-manager,
+    nixos-hardware, flake-utils, nix-darwin, homebrew-core, homebrew-cask
+    , nix-homebrew, disko, ... }@inputs:
     let
-      set1 =
-        let
-          system = "x86_64-linux";
-          pkgs = nixpkgs.legacyPackages.${system};
-        in
-        {
-          nixosConfigurations = {
-            framework = nixpkgs.lib.nixosSystem {
+      set1 = let
+        system = "x86_64-linux";
+        pkgs = nixpkgs.legacyPackages.${system};
+      in {
+        nixosConfigurations = {
+          framework = nixpkgs.lib.nixosSystem {
+            inherit system;
+            specialArgs = {
+              inherit inputs;
               inherit system;
-              specialArgs = {
-                inherit inputs;
-                inherit system;
 
-              };
-              modules = [
-                ./hosts/framework
-                nixos-hardware.nixosModules.framework-11th-gen-intel
-              ];
             };
-            pc = nixpkgs.lib.nixosSystem {
+            modules = [
+              ./hosts/framework
+              nixos-hardware.nixosModules.framework-11th-gen-intel
+            ];
+          };
+          pc = nixpkgs.lib.nixosSystem {
+            inherit system;
+            specialArgs = {
+              inherit inputs;
               inherit system;
-              specialArgs = {
-                inherit inputs;
-                inherit system;
-              };
-              modules = [
-                ./hosts/asus-rog-z790i
-              ];
             };
-
-            moab = nixpkgs.lib.nixosSystem {
-              inherit system;
-              specialArgs = {
-                inherit inputs;
-                inherit system;
-              };
-              modules = [
-                ./hosts/moab
-                nixos-hardware.nixosModules.framework-13-7040-amd
-              ];
-            };
-
-            dayone = nixpkgs.lib.nixosSystem {
-              inherit system;
-              specialArgs = {
-                inherit inputs;
-                inherit system;
-              };
-              modules = [
-                disko.nixosModules.disko
-                ./hosts/dayone
-              ];
-            };
-
-            factorysecond = nixpkgs.lib.nixosSystem {
-              inherit system;
-              specialArgs = {
-                inherit inputs;
-                inherit system;
-              };
-              modules = [
-                disko.nixosModules.disko
-                ./hosts/factorysecond
-              ];
-            };
-            pivpn = nixpkgs.lib.nixosSystem {
-              system = "aarch64-linux";
-              specialArgs = {
-                inherit inputs;
-                system = "aarch64-linux";
-              };
-              modules = [
-                disko.nixosModules.disko
-                ./hosts/pivpn
-              ];
-            };
+            modules = [ ./hosts/asus-rog-z790i ];
           };
 
-          # homeConfigurations.tzen = home-manager.lib.homeManagerConfiguration {
-          #   inherit pkgs;
+          moab = nixpkgs.lib.nixosSystem {
+            inherit system;
+            specialArgs = {
+              inherit inputs;
+              inherit system;
+            };
+            modules = [
+              ./hosts/moab
+              nixos-hardware.nixosModules.framework-13-7040-amd
+            ];
+          };
 
-          #   modules = [ ./home ];
+          dayone = nixpkgs.lib.nixosSystem {
+            inherit system;
+            specialArgs = {
+              inherit inputs;
+              inherit system;
+            };
+            modules = [ disko.nixosModules.disko ./hosts/dayone ];
+          };
 
-          # };
+          factorysecond = nixpkgs.lib.nixosSystem {
+            inherit system;
+            specialArgs = {
+              inherit inputs;
+              inherit system;
+            };
+            modules = [ disko.nixosModules.disko ./hosts/factorysecond ];
+          };
+          pivpn = nixpkgs.lib.nixosSystem {
+            system = "aarch64-linux";
+            specialArgs = {
+              inherit inputs;
+              system = "aarch64-linux";
+            };
+            modules = [ disko.nixosModules.disko ./hosts/pivpn ];
+          };
+        };
 
-          # homeConfigurations.dhsyan = home-manager.lib.homeManagerConfiguration {
-          #   pkgs = self.darwinConfigurations."Ding-Hans-MacBook-Pro".pkgs;
-          #   modules = [ ./temp ];
-          # };
+        # homeConfigurations.tzen = home-manager.lib.homeManagerConfiguration {
+        #   inherit pkgs;
 
-          darwinConfigurations."Ding-Hans-MacBook-Pro" = nix-darwin.lib.darwinSystem {
+        #   modules = [ ./home ];
+
+        # };
+
+        # homeConfigurations.dhsyan = home-manager.lib.homeManagerConfiguration {
+        #   pkgs = self.darwinConfigurations."Ding-Hans-MacBook-Pro".pkgs;
+        #   modules = [ ./temp ];
+        # };
+
+        darwinConfigurations."Ding-Hans-MacBook-Pro" =
+          nix-darwin.lib.darwinSystem {
             system = "aarch64_darwin";
             specialArgs = { inherit inputs; };
             modules = [
@@ -197,7 +175,8 @@
                     "homebrew/homebrew-core" = homebrew-core;
                     "homebrew/homebrew-cask" = homebrew-cask;
                     "homebrew/homebrew-bundle" = inputs.homebrew-bundle;
-                    "nikitabobko/homebrew-tap" = inputs.nikitabobko-homebrew-tap;
+                    "nikitabobko/homebrew-tap" =
+                      inputs.nikitabobko-homebrew-tap;
                     # "koekeishiya/homebrew-formulae" = inputs.yabai-homebrew-tap;
                   };
 
@@ -210,22 +189,15 @@
               }
             ];
           };
-        };
+      };
 
-      set2 = flake-utils.lib.eachDefaultSystem (
-        system:
-        let
-          pkgs = nixpkgs.legacyPackages.${system};
-        in
-        {
+      set2 = flake-utils.lib.eachDefaultSystem (system:
+        let pkgs = nixpkgs.legacyPackages.${system};
+        in {
           devShells = {
             default = pkgs.mkShell {
               NIX_SSHOPTS = "-i ~/.ssh/yubikey";
-              packages = with pkgs; [
-                nixfmt-rfc-style
-                nixos-anywhere
-                nixd
-              ];
+              packages = with pkgs; [ nixfmt-rfc-style nixos-anywhere nixd ];
               name = "nix-dev-shell";
 
               shellHook = ''
@@ -234,10 +206,8 @@
 
             };
           };
-        }
-      );
+        });
 
       return = set1 // set2;
-    in
-    return;
+    in return;
 }
