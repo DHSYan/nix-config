@@ -20,7 +20,7 @@
       "docker-compose"
       "postgresql"
       "gpg"
-      "aws-sam-cli"
+      # "aws-sam-cli"
       "yarn"
       # "sshfs"
       "stow"
