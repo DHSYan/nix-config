@@ -62,7 +62,6 @@
     sxhkd
     # texliveMedium # broken as of 2025-01-23
     # racket
-    neofetch
     libfido2
     sshfs-fuse
     # xorg.xsetroot
