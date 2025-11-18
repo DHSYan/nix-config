@@ -97,7 +97,7 @@
     bitwarden
     slstatus
     xfce.thunar
-    # weylus
+    weylus
     lorien
     blueman
     copyq
