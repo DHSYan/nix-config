@@ -1,23 +1,13 @@
-{ pkgs, inputs, ... }: {
-  nixpkgs.config.allowUnfree = true;
+{ pkgs, pkgs-unstable, inputs, ... }: 
+let 
 
-  # this allows us to run binaries?
-  programs.nix-ld = {
-    enable = true;
-    libraries = with pkgs;
-      [
-        # exfat
-      ];
-  };
-
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-25.9.0"
-    # "adobe-reader-9.5.5"
-    "qtwebengine-5.15.19"
+  unstablePackage = with pkgs-unstable; [
+    tmux
+    fzf
+    alacritty
   ];
-  nixpkgs.config.allowBroken = true;
 
-  environment.systemPackages = with pkgs; [
+  stablePackage = with pkgs; [
     tailscale-systray
     claude-code
     devbox
@@ -49,7 +39,6 @@
     # inputs.ghostty.packages.${pkgs.system}.default
     ripgrep
     tldr
-    tmux
     unzip
     zip
     wget
@@ -60,7 +49,6 @@
     # xorg.xev
     feh
     zsh
-    fzf
     sxhkd
     # texliveMedium # broken as of 2025-01-23
     # racket
@@ -141,7 +129,6 @@
     libnotify
     # kitty
     hyprpaper
-    alacritty
     rofi
     wofi
     networkmanagerapplet
@@ -195,5 +182,26 @@
     zotero
     google-cloud-sdk
   ];
+  
+in{
+  nixpkgs.config.allowUnfree = true;
+
+  # this allows us to run binaries?
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs;
+      [
+        # exfat
+      ];
+  };
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-25.9.0"
+    # "adobe-reader-9.5.5"
+    "qtwebengine-5.15.19"
+  ];
+  nixpkgs.config.allowBroken = true;
+
+  environment.systemPackages = unstablePackage ++ stablePackage;
 
 }

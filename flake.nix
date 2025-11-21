@@ -5,32 +5,26 @@
   # Defines all the dependencies of this flake
   # These will get passed as arguments into the outputs function below
   inputs = {
-    nixpkgs.url =
-      "github:NixOS/nixpkgs/nixos-25.05"; # nixos-25.05 vs nixpkgs-25.05, the nixos one gets extra os testing
+    # nixos-25.05 vs nixpkgs-25.05, the nixos one gets extra os testing
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     nixpkgs-stable-darwin.url = "github:NixOS/nixpkgs/nixpkgs-25.05-darwin"; # A
-    nixpkgs-unstable.url =
-      "github:nixos/nixpkgs/nixpkgs-unstable"; # maybe should consider adding nixos-unstable and see if that works better...
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixos-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+
     flake-utils.url = "github:numtide/flake-utils";
 
     nix-darwin = {
       url =
-        "github:LnL7/nix-darwin/nix-darwin-25.05"; # B (#A and #B have to match up, if you are using stable channel"
+        "github:LnL7/nix-darwin/nix-darwin-25.05"; # B (#A and #B have to match up, if you are using stable channel")
       inputs.nixpkgs.follows = "nixpkgs-stable-darwin";
     };
-
-    # home-manager = {
-    #   url = "github:nix-community/home-manager";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
 
     nixos-hardware = { url = "github:NixOS/nixos-hardware/master"; };
 
     neovim-nightly = {
       url = "github:nix-community/neovim-nightly-overlay/master";
     };
-    # ghostty = {
-    #  url = "github:ghostty-org/ghostty";
-    # };
+
     hyprland-nightly = {
       url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     };
@@ -69,18 +63,20 @@
 
   # @function => attrset
   # the return value represent the build result
-  outputs = { self, nixpkgs,
-    # home-manager,
-    nixos-hardware, flake-utils, nix-darwin, homebrew-core, homebrew-cask
-    , nix-homebrew, disko, ... }@inputs:
+  outputs = { self, nixpkgs, nixos-unstable, nixos-hardware, flake-utils
+    , nix-darwin, homebrew-core, homebrew-cask, nix-homebrew, disko, ...
+    }@inputs:
     let
       set1 = let
         system = "x86_64-linux";
         pkgs = nixpkgs.legacyPackages.${system};
+        pkgs-unstable = nixos-unstable.legacyPackages.${system};
       in {
         nixosConfigurations = {
           framework = nixpkgs.lib.nixosSystem {
             inherit system;
+            inherit pkgs;
+            inherit pkgs-unstable;
             specialArgs = {
               inherit inputs;
               inherit system;
@@ -102,6 +98,8 @@
 
           moab = nixpkgs.lib.nixosSystem {
             inherit system;
+            inherit pkgs;
+            inherit pkgs-unstable;
             specialArgs = {
               inherit inputs;
               inherit system;
