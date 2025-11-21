@@ -197,7 +197,7 @@
           devShells = {
             default = pkgs.mkShell {
               NIX_SSHOPTS = "-i ~/.ssh/yubikey";
-              packages = with pkgs; [ nixfmt-rfc-style nixos-anywhere nixd ];
+              packages = with pkgs; [ nixfmt-classic nixos-anywhere nixd ];
               name = "nix-dev-shell";
 
               shellHook = ''

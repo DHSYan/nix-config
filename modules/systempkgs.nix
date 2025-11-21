@@ -26,7 +26,7 @@
     # ngrok
     # nodejs
     nixd
-    nixfmt
+    nixfmt-classic
     # typescript-language-server
     # tinymist
     harper
