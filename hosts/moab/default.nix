@@ -11,11 +11,11 @@
     ../../modules/systemsettings.nix
     ../../modules/sysenvvars.nix
     ../../modules/keyboard.nix
-    ../../modules/wifi.nix
+    ../../modules/networking.nix
     ../../modules/inputmethod.nix
     ../../modules/docker.nix
     ../../modules/postgresql.nix
-    ../../modules/wireguard.nix
+    # ../../modules/wireguard.nix
     ../../modules/games.nix
     ../../modules/firewall.nix
     ../../modules/lspserverpkgs.nix
