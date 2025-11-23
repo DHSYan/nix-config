@@ -7,7 +7,7 @@
         ../../modules/hyprland.nix
         ../../modules/user.nix
         ../../modules/fonts.nix
-        ../../modules/yubikey.nix
+        # ../../modules/yubikey.nix
         ../../modules/systemsettings.nix
         ../../modules/sysenvvars.nix
         ../../modules/keyboard.nix
