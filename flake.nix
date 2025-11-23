@@ -91,13 +91,13 @@
               nixos-hardware.nixosModules.framework-11th-gen-intel
             ];
           };
-          pc = nixpkgs.lib.nixosSystem {
+          newton = nixpkgs.lib.nixosSystem {
             inherit system;
             specialArgs = {
               inherit inputs;
               inherit system;
             };
-            modules = [ ./hosts/asus-rog-z790i ];
+            modules = [ ./hosts/newton ];
           };
 
           moab = nixpkgs.lib.nixosSystem {
