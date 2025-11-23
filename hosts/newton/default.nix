@@ -13,6 +13,7 @@
         ../../modules/keyboard.nix
         ../../modules/tailscale.nix
         ./hardware-configuration.nix
+        ../../modules/root.nix
     ];
 
     # bootloader 
