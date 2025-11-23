@@ -11,6 +11,7 @@
         ../../modules/systemsettings.nix
         ../../modules/sysenvvars.nix
         ../../modules/keyboard.nix
+        ../../modules/tailscale.nix
         ./hardware-configuration.nix
     ];
 

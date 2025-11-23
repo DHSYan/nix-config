@@ -19,6 +19,7 @@
     ../../modules/games.nix
     ../../modules/firewall.nix
     ../../modules/lspserverpkgs.nix
+    ../../modules/tailscale.nix
     ./hardware-configuration.nix
   ];
 
