@@ -20,6 +20,7 @@
     ../../modules/firewall.nix
     ../../modules/lspserverpkgs.nix
     ../../modules/tailscale.nix
+    ../../modules/localsend.nix
     ./hardware-configuration.nix
   ];
 
