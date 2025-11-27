@@ -21,6 +21,7 @@
     ../../modules/lspserverpkgs.nix
     ../../modules/tailscale.nix
     ../../modules/localsend.nix
+    ../../modules/virtualization.nix
     ./hardware-configuration.nix
   ];
 
