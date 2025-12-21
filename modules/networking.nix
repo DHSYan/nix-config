@@ -40,6 +40,12 @@
       "NETGEAR06" = {
           pskRaw = "ext:netgear06_psk";
       };
+      "TELUS0167" = {
+          pskRaw = "ext:2177_house";
+      };
+      "cvc office" = {
+          pskRaw = "ext:cvc";
+      };
     };
   };
 }
