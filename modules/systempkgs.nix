@@ -18,13 +18,15 @@
   nixpkgs.config.allowBroken = true;
 
   environment.systemPackages = with pkgs; [
+    luajitPackages.luarocks
+    python3
     tailscale-systray
     claude-code
     devbox
     libreoffice
     devenv
     # ngrok
-    # nodejs
+    nodejs
     nixd
     nixfmt-classic
     # typescript-language-server
@@ -42,9 +44,9 @@
     wezterm
     google-chrome
     # brave
-    # gcc
-    # clang
-    # clang-tools
+    gcc
+    clang
+    clang-tools
     inputs.neovim-nightly.packages.${pkgs.system}.default
     # inputs.ghostty.packages.${pkgs.system}.default
     ripgrep
