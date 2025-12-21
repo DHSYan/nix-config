@@ -20,6 +20,7 @@
     ../../modules/firewall-server.nix
     ../../modules/nextcloud.nix
     ../../modules/root.nix
+    ../../modules/tailscale.nix
 
   ];
   boot.loader.grub = {
