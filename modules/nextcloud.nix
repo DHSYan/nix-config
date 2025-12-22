@@ -13,6 +13,7 @@
     settings = {
       trusted_domains = [
         "192.168.1.101"
+        "dayone"
       ];
     };
   };

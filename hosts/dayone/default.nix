@@ -21,6 +21,7 @@
     ../../modules/nextcloud.nix
     ../../modules/root.nix
     ../../modules/tailscale.nix
+    ../../modules/paperless.nix
 
   ];
   boot.loader.grub = {
