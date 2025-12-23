@@ -121,6 +121,15 @@
             modules = [ disko.nixosModules.disko ./hosts/dayone ];
           };
 
+          razer = nixpkgs.lib.nixosSystem {
+            inherit system;
+            specialArgs = {
+              inherit inputs;
+              inherit system;
+            };
+            modules = [ disko.nixosModules.disko ./hosts/razer ];
+          };
+
           factorysecond = nixpkgs.lib.nixosSystem {
             inherit system;
             specialArgs = {
