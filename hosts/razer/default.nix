@@ -54,7 +54,8 @@
 
     };
   };
+  services.upower.ignoreLid = true;
+  services.autosuspend.enable = false;
 
-
-  system.stateVersion = "25.11";
+  system.stateVersion = "25.05";
 }
