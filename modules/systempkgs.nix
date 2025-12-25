@@ -11,7 +11,7 @@
   };
 
   nixpkgs.config.permittedInsecurePackages = [
-    "electron-25.9.0"
+    "electron-36.9.5"
     # "adobe-reader-9.5.5"
     "qtwebengine-5.15.19"
   ];
@@ -19,6 +19,7 @@
 
   environment.systemPackages = with pkgs; [
     luajitPackages.luarocks
+    texliveSmall
     python3
     tailscale-systray
     claude-code
