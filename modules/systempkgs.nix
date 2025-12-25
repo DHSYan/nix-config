@@ -18,6 +18,7 @@
   nixpkgs.config.allowBroken = true;
 
   environment.systemPackages = with pkgs; [
+    tsocks
     luajitPackages.luarocks
     texliveSmall
     python3
