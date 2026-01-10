@@ -12,4 +12,7 @@
       fcitx5-chewing
     ];
   };
+  services.xserver.xkb.variant = "dvorak";
+  console.useXkbConfig = true;
+
 }
