@@ -46,6 +46,9 @@
       "cvc office" = {
           pskRaw = "ext:cvc";
       };
+      "homeyen" = {
+          pskRaw = "ext:homeyen_psk";
+      };
     };
   };
 }
