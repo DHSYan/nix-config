@@ -28,7 +28,7 @@
     libreoffice
     devenv
     # ngrok
-    nodejs
+    # nodejs
     nixd
     nixfmt-classic
     # typescript-language-server
@@ -198,6 +198,9 @@
     htop
     zotero
     google-cloud-sdk
+    brave
+    xrdp
+    awscli2
   ];
 
 }
