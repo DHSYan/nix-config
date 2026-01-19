@@ -18,6 +18,8 @@
   nixpkgs.config.allowBroken = true;
 
   environment.systemPackages = with pkgs; [
+    lsof
+    rustup
     tsocks
     luajitPackages.luarocks
     texliveSmall
