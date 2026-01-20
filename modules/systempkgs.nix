@@ -101,7 +101,7 @@
     spotifyd
     tree-sitter
     zathura
-    bitwarden
+    bitwarden-desktop
     slstatus
     xfce.thunar
     weylus
@@ -133,7 +133,7 @@
     spice
     spice-gtk
     spice-protocol
-    win-virtio
+    virtio-win
     win-spice
     pdftk
     pdfarranger
@@ -167,7 +167,6 @@
     hyprshot
     playerctl
     nh
-    whatsapp-for-linux
     markdownlint-cli
     # kanata
     gh # github cli

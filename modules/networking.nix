@@ -2,7 +2,7 @@
 {
   networking.wireless = {
     enable = true; # Enables wireless support via wpa_supplicant.
-    userControlled.enable = true;
+    userControlled = true;
     secretsFile = "/etc/wireless.conf";
     networks = {
       TELUS7918 = {

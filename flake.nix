@@ -6,7 +6,7 @@
   # These will get passed as arguments into the outputs function below
   inputs = {
     nixpkgs.url =
-      "github:NixOS/nixpkgs/nixos-25.05"; # nixos-25.05 vs nixpkgs-25.05, the nixos one gets extra os testing
+      "github:NixOS/nixpkgs/nixos-unstable"; # nixos-25.05 vs nixpkgs-25.05, the nixos one gets extra os testing
     nixpkgs-stable-darwin.url = "github:NixOS/nixpkgs/nixpkgs-25.05-darwin"; # A
     nixpkgs-unstable.url =
       "github:nixos/nixpkgs/nixpkgs-unstable"; # maybe should consider adding nixos-unstable and see if that works better...
