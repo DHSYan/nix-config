@@ -11,14 +11,17 @@
     ../../modules/systemsettings.nix
     ../../modules/sysenvvars.nix
     ../../modules/keyboard.nix
-    ../../modules/wifi.nix
+    ../../modules/networking.nix
     ../../modules/inputmethod.nix
     ../../modules/docker.nix
     ../../modules/postgresql.nix
-    ../../modules/wireguard.nix
+    # ../../modules/wireguard.nix
     ../../modules/games.nix
     ../../modules/firewall.nix
     ../../modules/lspserverpkgs.nix
+    ../../modules/tailscale.nix
+    ../../modules/localsend.nix
+    ../../modules/virtualization.nix
     ./hardware-configuration.nix
   ];
 
@@ -54,13 +57,13 @@
       CPU_MAX_PERF_ON_AC = 100;
 
       CPU_MIN_PERF_ON_BAT = 0;
-      CPU_MAX_PERF_ON_BAT = 40;
+      CPU_MAX_PERF_ON_BAT = 60;
 
       START_CHARGE_THRESH_BAT0 = 60;
-      STOP_CHARGE_THRESH_BAT0 = 100;
+      STOP_CHARGE_THRESH_BAT0 = 80;
 
       START_CHARGE_THRESH_BAT1 = 60;
-      STOP_CHARGE_THRESH_BAT1 = 100;
+      STOP_CHARGE_THRESH_BAT1 = 80;
 
     };
   };

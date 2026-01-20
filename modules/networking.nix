@@ -1,6 +1,5 @@
 { ... }:
 {
-  services.tailscale.enable = true;
   networking.wireless = {
     enable = true; # Enables wireless support via wpa_supplicant.
     userControlled.enable = true;
@@ -40,6 +39,15 @@
       };
       "NETGEAR06" = {
           pskRaw = "ext:netgear06_psk";
+      };
+      "TELUS0167" = {
+          pskRaw = "ext:2177_house";
+      };
+      "cvc office" = {
+          pskRaw = "ext:cvc";
+      };
+      "homeyen" = {
+          pskRaw = "ext:homeyen_psk";
       };
     };
   };

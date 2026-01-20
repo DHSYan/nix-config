@@ -87,13 +87,13 @@
               nixos-hardware.nixosModules.framework-11th-gen-intel
             ];
           };
-          pc = nixpkgs.lib.nixosSystem {
+          newton = nixpkgs.lib.nixosSystem {
             inherit system;
             specialArgs = {
               inherit inputs;
               inherit system;
             };
-            modules = [ ./hosts/asus-rog-z790i ];
+            modules = [ ./hosts/newton ];
           };
 
           moab = nixpkgs.lib.nixosSystem {
@@ -117,6 +117,15 @@
               inherit system;
             };
             modules = [ disko.nixosModules.disko ./hosts/dayone ];
+          };
+
+          razer = nixpkgs.lib.nixosSystem {
+            inherit system;
+            specialArgs = {
+              inherit inputs;
+              inherit system;
+            };
+            modules = [ disko.nixosModules.disko ./hosts/razer ];
           };
 
           factorysecond = nixpkgs.lib.nixosSystem {
@@ -195,7 +204,7 @@
           devShells = {
             default = pkgs.mkShell {
               NIX_SSHOPTS = "-i ~/.ssh/yubikey";
-              packages = with pkgs; [ nixfmt-rfc-style nixos-anywhere nixd ];
+              packages = with pkgs; [ nixfmt-classic nixos-anywhere nixd ];
               name = "nix-dev-shell";
 
               shellHook = ''

@@ -1,13 +1,28 @@
 { pkgs, pkgs-unstable, inputs, ... }: 
 let 
 
-  unstablePackage = with pkgs-unstable; [
-    tmux
-    fzf
-    alacritty
+  # this allows us to run binaries?
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs;
+      [
+        # exfat
+      ];
+  };
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-36.9.5"
+    # "adobe-reader-9.5.5"
+    "qtwebengine-5.15.19"
   ];
 
-  stablePackage = with pkgs; [
+  environment.systemPackages = with pkgs; [
+    lsof
+    rustup
+    tsocks
+    luajitPackages.luarocks
+    texliveSmall
+    python3
     tailscale-systray
     claude-code
     devbox
@@ -16,7 +31,7 @@ let
     # ngrok
     # nodejs
     nixd
-    nixfmt
+    nixfmt-classic
     # typescript-language-server
     # tinymist
     harper
@@ -32,9 +47,9 @@ let
     wezterm
     google-chrome
     # brave
-    # gcc
-    # clang
-    # clang-tools
+    gcc
+    clang
+    clang-tools
     inputs.neovim-nightly.packages.${pkgs.system}.default
     # inputs.ghostty.packages.${pkgs.system}.default
     ripgrep
@@ -181,6 +196,9 @@ let
     htop
     zotero
     google-cloud-sdk
+    brave
+    xrdp
+    awscli2
   ];
   
 in{

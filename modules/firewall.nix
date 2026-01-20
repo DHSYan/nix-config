@@ -1,5 +1,4 @@
-{ ... }: 
-{
+{ ... }: {
 
   networking.firewall = {
     enable = true;
@@ -7,16 +6,10 @@
       80
       443
       4070
+      57621 # Spotify
     ];
-    # allowedUDPPortRanges = [
-    #   {
-    #     from = 4000;
-    #     to = 4007;
-    #   }
-    #   {
-    #     from = 8000;
-    #     to = 8100;
-    #   }
-    # ];
+    allowedUDPPorts = [
+      5353 # Spotify
+    ];
   };
 }
