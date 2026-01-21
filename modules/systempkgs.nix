@@ -18,6 +18,7 @@
   nixpkgs.config.allowBroken = true;
 
   environment.systemPackages = with pkgs; [
+    kubectl
     lsof
     rustup
     tsocks
@@ -32,7 +33,7 @@
     # ngrok
     # nodejs
     nixd
-    nixfmt-classic
+    nixfmt
     # typescript-language-server
     # tinymist
     harper
@@ -103,7 +104,7 @@
     zathura
     bitwarden-desktop
     slstatus
-    xfce.thunar
+    thunar
     weylus
     lorien
     blueman
