@@ -18,18 +18,20 @@
   nixpkgs.config.allowBroken = true;
 
   environment.systemPackages = with pkgs; [
+    yazi
+    direnv
     kubectl
-    lsof
-    rustup
+    # lsof
+    # rustup
     tsocks
     luajitPackages.luarocks
     texliveSmall
     python3
     tailscale-systray
-    claude-code
-    devbox
+    # claude-code
+    # devbox
     libreoffice
-    devenv
+    # devenv
     # ngrok
     # nodejs
     nixd
@@ -40,7 +42,7 @@
     # webex
     # gromit-mpx
     nextcloud-client
-    wireguard-tools
+    # wireguard-tools
     wakeonlan
     # whatsie
     # typst
@@ -102,12 +104,13 @@
     spotifyd
     tree-sitter
     zathura
-    bitwarden-desktop
-    slstatus
+    # bitwarden-desktop
+    slstatus # TODO ???
     thunar
     weylus
     lorien
     blueman
+    btop
     copyq
     # albert
     gnupg
@@ -116,8 +119,8 @@
     # slock
     lightdm
     vscode # Don't tell anyone please, but sometimes I have no choice
-    vial
-    via
+    # vial
+    # via
     # fcitx5-with-addons
     wmctrl
     bat
@@ -182,7 +185,7 @@
     image-roll
     vlc
     samba
-    bibletime
+    # bibletime
     nix-index
     docker
     docker-compose
@@ -193,16 +196,15 @@
     # awscli
     obs-studio
     yarn
-    gemini-cli
+    # gemini-cli
     rstudio
     R
     powertop
-    htop
     zotero
-    google-cloud-sdk
+    # google-cloud-sdk
     brave
-    xrdp
-    awscli2
+    # xrdp
+    # awscli2
   ];
 
 }
