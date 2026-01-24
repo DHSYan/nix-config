@@ -23,7 +23,7 @@
     ../../modules/localsend.nix
     ../../modules/virtualization.nix
     ../../modules/k3s.nix
-    ../../modules/desktop.nix
+    ../../modules/xdg.nix
     ./hardware-configuration.nix
   ];
 

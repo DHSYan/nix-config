@@ -9,6 +9,7 @@
         #     "feh.desktop"
         # ];
         "text/*" = "nvim.desktop";
+        "inode/directory" = "yazi.desktop";
     };
 }
 
