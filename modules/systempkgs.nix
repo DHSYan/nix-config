@@ -18,6 +18,11 @@
   nixpkgs.config.allowBroken = true;
 
   environment.systemPackages = with pkgs; [
+    wineWowPackages.waylandFull
+    # wineWowPackages.stable
+    wine64
+    koreader
+    readest
     yazi
     direnv
     kubectl
