@@ -22,6 +22,7 @@
     ../../modules/tailscale.nix
     ../../modules/localsend.nix
     ../../modules/virtualization.nix
+    ../../modules/desktop.nix
     ./hardware-configuration.nix
   ];
 
