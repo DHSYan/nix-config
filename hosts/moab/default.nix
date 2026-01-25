@@ -24,6 +24,7 @@
     ../../modules/virtualization.nix
     ../../modules/k3s.nix
     ../../modules/xdg.nix
+    ../../modules/development.nix
     ./hardware-configuration.nix
   ];
 
