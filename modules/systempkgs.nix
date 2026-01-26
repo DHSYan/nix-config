@@ -18,6 +18,7 @@
   nixpkgs.config.allowBroken = true;
 
   environment.systemPackages = with pkgs; [
+    zellij
     opencode
     wineWowPackages.waylandFull
     # wineWowPackages.stable
@@ -78,7 +79,7 @@
     fzf
     sxhkd
     # texliveMedium # broken as of 2025-01-23
-    # racket
+    racket
     libfido2
     sshfs-fuse
     # xorg.xsetroot
@@ -207,7 +208,7 @@
     R
     powertop
     zotero
-    # google-cloud-sdk
+    google-cloud-sdk
     brave
     # xrdp
     # awscli2
