@@ -167,7 +167,6 @@
     lazygit
     zed-editor
     brightnessctl
-    zoom-us
     # anki
     slurp
     grim
@@ -181,7 +180,6 @@
     markdownlint-cli
     # kanata
     gh # github cli
-
     inputs.zen-browser.packages."${system}".default
     # vmware-workstation
     open-vm-tools
@@ -209,9 +207,8 @@
     powertop
     zotero
     google-cloud-sdk
-    brave
-    # xrdp
-    # awscli2
+    # brave
+    xrdp
   ];
 
 }
